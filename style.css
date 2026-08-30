@@ -1159,3 +1159,180 @@ footer {
   }
 
 }
+/* ==========================================
+   FIXED NAV - FINAL
+========================================== */
+
+.fixed-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 64px !important;
+
+  z-index: 99999 !important;
+
+  background: rgba(8, 5, 8, 0.82) !important;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(200, 120, 165, 0.16);
+}
+
+.fixed-nav .nav-inner {
+  width: calc(100% - 60px) !important;
+  max-width: 1180px !important;
+
+  height: 64px !important;
+
+  margin: 0 auto !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+
+/* LEFT LOGO */
+
+.fixed-nav .nav-logo {
+  display: block !important;
+
+  margin: 0 !important;
+
+  color: #a9758e !important;
+
+  text-decoration: none !important;
+
+  font-size: 9px !important;
+
+  letter-spacing: 0.35em !important;
+
+  white-space: nowrap;
+}
+
+
+/* RIGHT MENU */
+
+.fixed-nav .nav-links {
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 30px !important;
+
+  margin: 0 !important;
+}
+
+
+.fixed-nav .nav-links a {
+  display: inline-block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  position: relative;
+
+  color: #806071 !important;
+
+  text-decoration: none !important;
+
+  font-size: 8px !important;
+
+  letter-spacing: 0.25em !important;
+
+  transition: 0.3s ease;
+}
+
+
+.fixed-nav .nav-links a:hover {
+  color: #e1aac5 !important;
+}
+
+
+/* 下線 */
+
+.fixed-nav .nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: #cb83a7;
+
+  transition: width 0.3s ease;
+}
+
+
+.fixed-nav .nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* X */
+
+.fixed-nav .nav-links .nav-x {
+  color: #c58ba7 !important;
+
+  font-size: 16px !important;
+
+  letter-spacing: 0 !important;
+}
+
+
+.fixed-nav .nav-links .nav-x:hover {
+  color: #f0b9d3 !important;
+
+  text-shadow:
+    0 0 12px rgba(225, 130, 180, 0.4);
+}
+
+
+/* メニューを押した時に見出しが隠れない */
+
+#about,
+#cast,
+#system,
+#rule {
+  scroll-margin-top: 90px;
+}
+
+
+/* ==========================================
+   NAV MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .fixed-nav {
+    height: 58px !important;
+  }
+
+  .fixed-nav .nav-inner {
+    width: calc(100% - 24px) !important;
+    height: 58px !important;
+  }
+
+  .fixed-nav .nav-logo {
+    font-size: 7px !important;
+  }
+
+  .fixed-nav .nav-links {
+    gap: 12px !important;
+  }
+
+  .fixed-nav .nav-links a {
+    font-size: 6px !important;
+  }
+
+  .fixed-nav .nav-links .nav-x {
+    font-size: 14px !important;
+  }
+}
