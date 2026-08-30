@@ -981,3 +981,16 @@ footer {
 
   text-align: center;
 }
+/* FOLLOW US 周辺の余白調整 */
+
+.links {
+  padding: 90px 30px 110px;
+}
+
+.links > p {
+  margin-bottom: 30px;
+}
+
+.social-grid {
+  gap: 28px;
+}
