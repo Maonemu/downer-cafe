@@ -767,3 +767,129 @@ footer {
   }
 
 }
+/* ==========================================
+   X / SOCIAL BUTTON
+========================================== */
+
+.social-button {
+  width: 190px;
+  height: 90px;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 25px 10px;
+
+  position: relative;
+  overflow: hidden;
+
+  color: #a97890;
+
+  border: 1px solid rgba(200, 120, 165, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(70, 25, 50, 0.12),
+      rgba(8, 5, 8, 0.65)
+    );
+
+  text-decoration: none;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* うっすら光る背景 */
+
+.social-button::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  background: rgba(190, 90, 140, 0.08);
+
+  border-radius: 50%;
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  transition: 0.35s ease;
+}
+
+
+/* X */
+
+.social-icon {
+  position: relative;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  color: #c58aa7;
+
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+
+/* OFFICIAL */
+
+.social-name {
+  position: relative;
+
+  margin-top: 12px;
+
+  color: #644954;
+
+  font-size: 7px;
+
+  letter-spacing: 0.5em;
+
+  padding-left: 0.5em;
+
+  transition: color 0.35s ease;
+}
+
+
+/* マウスを乗せた時 */
+
+.social-button:hover {
+  transform: translateY(-4px);
+
+  color: #efbed5;
+
+  border-color: rgba(225, 145, 185, 0.65);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(185, 80, 135, 0.12);
+}
+
+.social-button:hover::before {
+  opacity: 1;
+}
+
+.social-button:hover .social-icon {
+  color: #efb9d3;
+
+  text-shadow:
+    0 0 12px rgba(225, 130, 180, 0.45),
+    0 0 30px rgba(190, 80, 140, 0.25);
+}
+
+.social-button:hover .social-name {
+  color: #a9768f;
+}
