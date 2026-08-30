@@ -12,7 +12,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+const castProfiles = {
 
+  shiki: {
+    name: "しき",
+    image: "しき.png",
+    message: "ここにプロフィールや一言を書きます。",
+    x: "#"
+  }
+
+};
+
+
+function openProfile(id) {
+
+  const profile = castProfiles[id];
+
+  document.getElementById("profile-name").textContent =
+    profile.name;
+
+  document.getElementById("profile-image").src =
+    profile.image;
+
+  document.getElementById("profile-message").textContent =
+    profile.message;
+
+  document.getElementById("profile-x").href =
+    profile.x;
+
+  document
+    .getElementById("profile-modal")
+    .classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeProfile() {
+
+  document
+    .getElementById("profile-modal")
+    .classList.remove("active");
+
+  document.body.style.overflow = "";
+
+}
+</script>
+  
 <body>
 <nav class="fixed-nav">
   <div class="nav-inner">
@@ -134,21 +181,13 @@
     <div class="cast-grid">
 
 
-      <div class="cast-card">
-
-        <img src="しき.png"
-             alt="しき">
-
-        <div class="cast-info">
-
-          <h3>しき</h3>
-
-          <p>CAST</p>
-
-        </div>
-
-      </div>
-
+     <div class="cast-card" onclick="openProfile('shiki')">
+  <img src="しき.png" alt="しき">
+  <div class="cast-info">
+    <h3>しき</h3>
+    <p>CAST</p>
+  </div>
+</div>
 
       <div class="cast-card">
 
@@ -242,6 +281,47 @@
 
       </div>
 
+      <!-- CAST PROFILE MODAL -->
+<div id="profile-modal" class="profile-modal">
+
+  <div class="profile-overlay" onclick="closeProfile()"></div>
+
+  <div class="profile-content">
+
+    <button class="profile-close" onclick="closeProfile()">
+      ×
+    </button>
+
+    <div class="profile-image">
+      <img id="profile-image" src="" alt="">
+    </div>
+
+    <div class="profile-text">
+
+      <p class="profile-role">CAST PROFILE</p>
+
+      <h3 id="profile-name"></h3>
+
+      <p id="profile-message" class="profile-message"></p>
+
+      <div class="profile-links">
+
+        <a
+          id="profile-x"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          𝕏
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
       <div class="system-item">
 
