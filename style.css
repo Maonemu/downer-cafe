@@ -950,3 +950,34 @@ footer {
   }
 
 }
+/* SOCIAL BUTTON 中央配置 修正 */
+
+.links .social-button {
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+}
+
+.links .social-icon {
+  display: block;
+
+  margin: 0 0 13px 0;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+.links .social-title {
+  display: block;
+
+  margin: 0;
+
+  line-height: 1;
+
+  text-align: center;
+}
