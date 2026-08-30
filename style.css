@@ -114,3 +114,137 @@
 
   letter-spacing: 0.3em;
 }
+/* =========================
+   PAGE FIX
+========================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  background: #090609 !important;
+
+  color: #c9bec6;
+}
+
+
+/* SYSTEM周辺 */
+
+.join-area {
+  width: calc(100% - 60px);
+  max-width: 850px;
+
+  margin: 50px auto 120px;
+
+  padding: 60px 40px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(70, 30, 55, 0.18),
+      rgba(12, 8, 11, 0.8)
+    );
+
+  border:
+    1px solid rgba(190, 115, 155, 0.22);
+}
+
+
+.join-label {
+  margin: 0 0 25px;
+
+  color: #8b5c74;
+
+  font-size: 9px;
+
+  letter-spacing: 0.5em;
+}
+
+
+.join-area h3 {
+  margin: 0 0 25px;
+
+  color: #cf9bb5;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.12em;
+}
+
+
+.join-text {
+  margin: 0 0 40px;
+
+  color: #988792;
+
+  font-size: 12px;
+
+  line-height: 2.2;
+}
+
+
+.join-button {
+  display: inline-block;
+
+  padding: 15px 40px;
+
+  color: #d3a0b8;
+
+  text-decoration: none;
+
+  border:
+    1px solid rgba(210, 130, 170, 0.4);
+
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+
+  transition: 0.3s;
+}
+
+
+.join-button:hover {
+  color: #f2c8dc;
+
+  background:
+    rgba(150, 60, 105, 0.15);
+
+  border-color:
+    rgba(230, 150, 190, 0.75);
+
+  box-shadow:
+    0 0 30px
+    rgba(170, 70, 125, 0.2);
+}
+
+
+.group-id {
+  margin: 25px 0 0;
+
+  color: #66505b;
+
+  font-size: 8px;
+
+  letter-spacing: 0.3em;
+}
+
+
+.rule-box {
+  max-width: 850px;
+
+  margin: 40px auto 120px;
+
+  padding: 35px 40px;
+
+  border-left:
+    1px solid rgba(190, 115, 155, 0.25);
+
+  color: #91808a;
+}
