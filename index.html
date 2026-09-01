@@ -13,44 +13,56 @@
 </head>
 
 <script>
+
 const castProfiles = {
 
   shiki: {
     name: "しき",
     image: "しき.png",
-    message: "ここにプロフィールや一言を書きます。",
-    x: "#"
+    hobby: "ここに趣味",
+    message: "ここに一言",
+    xName: "@XXXXXXXX",
+    x: "https://x.com/"
   },
 
   naruse: {
     name: "なるせ",
     image: "なるせ.jpg",
-    message: "ここになるせさんのプロフィール。",
-    x: "#"
+    hobby: "ここに趣味",
+    message: "ここに一言",
+    xName: "@XXXXXXXX",
+    x: "https://x.com/"
   },
 
   nekoto: {
     name: "ねこと",
     image: "ねこと.png",
-    message: "ここにねことさんのプロフィール。",
-    x: "#"
+    hobby: "ここに趣味",
+    message: "ここに一言",
+    xName: "@XXXXXXXX",
+    x: "https://x.com/"
   },
 
   mao: {
     name: "まお",
     image: "まお.png",
-    message: "ここにまおさんのプロフィール。",
-    x: "#"
+    hobby: "ここに趣味",
+    message: "ここに一言",
+    xName: "@XXXXXXXX",
+    x: "https://x.com/"
   },
 
   matsu: {
     name: "まつ",
     image: "まつ.png",
-    message: "ここにまつさんのプロフィール。",
-    x: "#"
+    hobby: "ここに趣味",
+    message: "ここに一言",
+    xName: "@XXXXXXXX",
+    x: "https://x.com/"
   }
 
 };
+
 
 function openProfile(id) {
 
@@ -62,8 +74,14 @@ function openProfile(id) {
   document.getElementById("profile-image").src =
     profile.image;
 
+  document.getElementById("profile-hobby").textContent =
+    profile.hobby;
+
   document.getElementById("profile-message").textContent =
     profile.message;
+
+  document.getElementById("profile-x-name").textContent =
+    profile.xName;
 
   document.getElementById("profile-x").href =
     profile.x;
@@ -85,6 +103,7 @@ function closeProfile() {
   document.body.style.overflow = "";
 
 }
+
 </script>
   
 <body>
@@ -256,9 +275,6 @@ function closeProfile() {
           <p>CAST</p>
 
         </div>
-
-      </div>
-
 
     </div>
 
