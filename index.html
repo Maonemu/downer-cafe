@@ -9,940 +9,109 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>ダウナー喫茶　Dull救世主 | VRChat Event</title>
+  <title>VRChat Events</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="select.css"
+  >
 </head>
-
 
 <body>
 
+  <main class="event-select">
 
-  <!-- =========================
-       FIXED NAV
-  ========================== -->
+    <div class="select-header">
 
-  <nav class="fixed-nav">
-
-    <div class="nav-inner">
-
-      <a href="#top" class="nav-logo">
-        DOWNER CAFE
-      </a>
-
-
-      <div class="nav-links">
-
-        <a href="#about">
-          ABOUT
-        </a>
-
-        <a href="#cast">
-          CAST
-        </a>
-
-        <a href="#system">
-          SYSTEM
-        </a>
-
-        <a href="#gallery">
-          GALLERY
-        </a>
-
-        <a href="#rule">
-          RULE
-        </a>
-
-        <a
-          href="https://x.com/Darry_nA?s=20"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-x"
-        >
-          𝕏
-        </a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-
-  <!-- =========================
-       TOP
-  ========================== -->
-
-  <header id="top" class="hero">
-
-    <div class="hero-inner">
-
-      <p class="hero-small">
-        VRChat EVENT
+      <p class="select-small">
+        VRChat EVENTS
       </p>
 
       <h1>
-        ダウナー喫茶<br>
-         Dull救世主
+        SELECT YOUR NIGHT
       </h1>
 
-      <p class="hero-copy">
-        非現実的な夢を見る大人達へ。
+      <p class="select-copy">
+        今夜、どちらの世界へ。
       </p>
 
+    </div>
 
-      <div class="next-open">
 
-        <span>
-          NEXT OPEN
-        </span>
+    <div class="event-grid">
 
-        <strong>
-          2026.09.10
-        </strong>
 
-        <p>
-          22:00 - 23:00
-        </p>
-
-      </div>
-
+      <!-- DOWNER CAFE -->
 
       <a
-        href="#about"
-        class="enter-button"
-      >
-        ENTER
-      </a>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- =========================
-       ABOUT
-  ========================== -->
-
-  <section
-    id="about"
-    class="section"
-  >
-
-    <p class="section-number">
-      01
-    </p>
-
-    <h2>
-      ABOUT
-    </h2>
-
-
-    <div class="about-content">
-
-      <h3>
-        甘くて、暗くて、<br>
-        少しだけ怪しい夜。
-      </h3>
-
-
-      <p>
-        ダウナー喫茶 Dull救世主。<br>
-        非現実的な夢を見る大人達へ。
-      </p>
-
-
-      <p>
-        一見すると、ただのカフェバー。<br>
-        けれど、ここにはひとつの噂があります。<br>
-
-        「気になるキャストと、二人きりで過ごせる場所があるらしい。」<br>
-
-        薄暗く静かな店内には、CHILLでどこか気だるい空気が流れています。<br>
-        迎えるのは、穏やかでダウナーなキャストたち。<br>
-        珈琲やカクテルを片手に、思い思いの夜をお楽しみください。<br>
-
-        そしてもし、<br>
-        「この人と、もう少し話したい。」<br>
-        そう思ったなら、キャストへ声をかけてみてください。<br>
-
-        その先に待つのは、誰にも邪魔されない二人だけの時間。<br>
-
-        語るも、静かに過ごすも自由。<br>
-        どうぞ、お好きな夜を。
-
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-<!-- =========================
-     CAST
-========================== -->
-
-<section
-  id="cast"
-  class="section"
->
-
-  <p class="section-number">
-    02
-  </p>
-
-  <h2>
-    CAST
-  </h2>
-
-  <p class="cast-guide">
-    SELECT A CAST
-  </p>
-
-
-  <div class="cast-grid">
-
-
-    <div class="cast-card" onclick="openProfile('cast01')">
-      <img src="cast01.png" alt="CAST 01">
-      <div class="cast-info">
-        <h3>CAST 01</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast02')">
-      <img src="cast02.png" alt="CAST 02">
-      <div class="cast-info">
-        <h3>CAST 02</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast03')">
-      <img src="cast03.png" alt="CAST 03">
-      <div class="cast-info">
-        <h3>CAST 03</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast04')">
-      <img src="cast04.png" alt="CAST 04">
-      <div class="cast-info">
-        <h3>CAST 04</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast05')">
-      <img src="cast05.png" alt="CAST 05">
-      <div class="cast-info">
-        <h3>CAST 05</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast06')">
-      <img src="cast06.png" alt="CAST 06">
-      <div class="cast-info">
-        <h3>CAST 06</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast07')">
-      <img src="cast07.png" alt="CAST 07">
-      <div class="cast-info">
-        <h3>CAST 07</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast08')">
-      <img src="cast08.png" alt="CAST 08">
-      <div class="cast-info">
-        <h3>CAST 08</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast09')">
-      <img src="cast09.png" alt="CAST 09">
-      <div class="cast-info">
-        <h3>CAST 09</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast10')">
-      <img src="cast10.png" alt="CAST 10">
-      <div class="cast-info">
-        <h3>CAST 10</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast11')">
-      <img src="cast11.png" alt="CAST 11">
-      <div class="cast-info">
-        <h3>CAST 11</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast12')">
-      <img src="cast12.png" alt="CAST 12">
-      <div class="cast-info">
-        <h3>CAST 12</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast13')">
-      <img src="cast13.png" alt="CAST 13">
-      <div class="cast-info">
-        <h3>CAST 13</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast14')">
-      <img src="cast14.png" alt="CAST 14">
-      <div class="cast-info">
-        <h3>CAST 14</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast15')">
-      <img src="cast15.png" alt="CAST 15">
-      <div class="cast-info">
-        <h3>CAST 15</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast16')">
-      <img src="cast16.png" alt="CAST 16">
-      <div class="cast-info">
-        <h3>CAST 16</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast17')">
-      <img src="cast17.png" alt="CAST 17">
-      <div class="cast-info">
-        <h3>CAST 17</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast18')">
-      <img src="cast18.png" alt="CAST 18">
-      <div class="cast-info">
-        <h3>CAST 18</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast19')">
-      <img src="cast19.png" alt="CAST 19">
-      <div class="cast-info">
-        <h3>CAST 19</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast20')">
-      <img src="cast20.png" alt="CAST 20">
-      <div class="cast-info">
-        <h3>CAST 20</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-  <!-- =========================
-       SYSTEM
-  ========================== -->
-
-  <section
-    id="system"
-    class="section"
-  >
-
-    <p class="section-number">
-      03
-    </p>
-
-    <h2>
-      SYSTEM
-    </h2>
-
-
-    <div class="system-grid">
-
-
-      <div class="system-item">
-
-        <span>
-          01
-        </span>
-
-        <h3>
-          GROUP
-        </h3>
-
-        <p>
-          VRChat Groupへ<br>
-          参加してください。
-        </p>
-
-      </div>
-
-
-
-      <div class="system-item">
-
-        <span>
-          02
-        </span>
-
-        <h3>
-          JOIN
-        </h3>
-
-        <p>
-          開催時間になりましたら<br>
-          Group InstanceへJoinしてください。
-        </p>
-
-      </div>
-
-
-
-      <div class="system-item">
-
-        <span>
-          03
-        </span>
-
-        <h3>
-          ENJOY
-        </h3>
-
-        <p>
-          キャストとの時間を<br>
-          お楽しみください。
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- HOW TO JOIN -->
-
-    <div class="join-area">
-
-      <p class="join-label">
-        HOW TO JOIN
-      </p>
-
-      <h3>
-        イベントへの参加方法
-      </h3>
-
-      <p class="join-text">
-        VRChat Group「ダウナー喫茶 Dull救世主」へ参加後、<br>
-        開催時間になりましたら
-        Group Instanceへお越しください。
-      </p>
-
-
-      <a
-        href="https://t.co/qvewBpiTkd"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="join-button"
-      >
-        VRChat GROUPに参加
-      </a>
-
-
-      <p class="group-id">
-        GROUP / DALLN4.2670
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       GALLERY
-  ========================== -->
-
-  <section
-    id="gallery"
-    class="section"
-  >
-
-    <p class="section-number">
-      04
-    </p>
-
-    <h2>
-      GALLERY
-    </h2>
-
-
-    <p class="gallery-copy">
-      ダウナー喫茶 Dull救世主で過ごした夜の記録。
-    </p>
-
-
-    <div class="gallery">
-
-      <img
-        src="gallery01.png"
-        alt="ダウナー喫茶 Gallery 1"
+        href="downer.html"
+        class="event-card downer-card"
       >
 
-      <img
-        src="gallery02.png"
-        alt="ダウナー喫茶 Gallery 2"
-      >
+        <div class="event-glow"></div>
 
-      <img
-        src="gallery03.png"
-        alt="ダウナー喫茶 Gallery 3"
-      >
+        <div class="event-content">
 
-    </div>
+          <p class="event-type">
+            VRChat EVENT
+          </p>
 
-  </section>
+          <h2>
+            ダウナー喫茶
+          </h2>
 
+          <p class="event-description">
+            甘くて、暗くて、<br>
+            少しだけ怪しい夜。
+          </p>
 
+          <span class="event-enter">
+            ENTER
+          </span>
 
-  <!-- =========================
-       RULE
-  ========================== -->
-
-  <section
-    id="rule"
-    class="section"
-  >
-
-    <p class="section-number">
-      05
-    </p>
-
-    <h2>
-      RULE
-    </h2>
-
-
-    <div class="rule-box">
-
-      <p>
-        ・お客様はアバターを約50MB以下。
-      </p>
-
-      <p>
-        ・視界ジャックなどの荒らし行為はおやめください。
-      </p>
-
-      <p>
-        ・過度な容量の下ネタ、暴言はやめてください。
-      </p>
-
-      <p>
-        ・スタッフの案内に従ってください。
-      </p>
-
-      <p>
-        ・キャストへのフレンド申請は控えてください。
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       X / VRChat
-  ========================== -->
-
-  <section
-    id="links"
-    class="links"
-  >
-
-    <p>
-      FOLLOW US
-    </p>
-
-
-    <div class="social-grid">
-
-
-      <!-- X -->
-
-      <a
-        href="https://x.com/Darry_nA?s=20"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-button"
-      >
-
-        <span class="social-icon">
-          𝕏
-        </span>
-
-        <span class="social-title">
-          OFFICIAL X
-        </span>
+        </div>
 
       </a>
 
 
 
-      <!-- VRChat -->
+      <!-- PROJECT SHISHA D4N -->
 
       <a
-        href="https://t.co/qvewBpiTkd"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-button"
+        href="d4n.html"
+        class="event-card d4n-card"
       >
 
-        <span class="social-icon">
-          ◇
-        </span>
+        <div class="smoke smoke-1"></div>
+        <div class="smoke smoke-2"></div>
 
-        <span class="social-title">
-          VRChat GROUP
-        </span>
+        <div class="event-content">
+
+          <p class="event-type">
+            VRChat SHISHA BAR
+          </p>
+
+          <h2 class="d4n-title">
+            Project Shisha:D4N
+          </h2>
+
+          <p class="event-description">
+            煙と灯りに溶ける、<br>
+            深夜のひととき。
+          </p>
+
+          <span class="event-enter">
+            ENTER
+          </span>
+
+        </div>
 
       </a>
 
 
     </div>
 
-  </section>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer>
-
-    <p>
-      © 2026 DOWNER CAFE
-    </p>
-
-  </footer>
-
-
-
- <!-- =========================
-     CAST PROFILE MODAL
-========================== -->
-
-<div
-  id="profile-modal"
-  class="profile-modal"
->
-
-  <div
-    class="profile-overlay"
-    onclick="closeProfile()"
-  ></div>
-
-
-  <div class="profile-content">
-
-    <button
-      class="profile-close"
-      onclick="closeProfile()"
-      aria-label="閉じる"
-    >
-      ×
-    </button>
-
-
-    <div class="profile-image">
-
-      <img
-        id="profile-image"
-        src=""
-        alt=""
-      >
-
-    </div>
-
-
-    <div class="profile-text">
-
-      <p class="profile-role">
-        CAST PROFILE
-      </p>
-
-      <h3 id="profile-name"></h3>
-
-
-      <div class="profile-item">
-
-        <p class="profile-label">
-          HOBBY
-        </p>
-
-        <p
-          id="profile-hobby"
-          class="profile-value"
-        ></p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-  <!-- ========================================
-       JAVASCRIPT
-  ========================================= -->
-
- <script>
-
-const castProfiles = {
-
-  cast01: {
-    name: "CAST 01",
-    image: "cast01.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast02: {
-    name: "CAST 02",
-    image: "cast02.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast03: {
-    name: "CAST 03",
-    image: "cast03.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast04: {
-    name: "CAST 04",
-    image: "cast04.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast05: {
-    name: "CAST 05",
-    image: "cast05.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast06: {
-    name: "CAST 06",
-    image: "cast06.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast07: {
-    name: "CAST 07",
-    image: "cast07.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast08: {
-    name: "CAST 08",
-    image: "cast08.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast09: {
-    name: "CAST 09",
-    image: "cast09.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast10: {
-    name: "CAST 10",
-    image: "cast10.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast11: {
-    name: "CAST 11",
-    image: "cast11.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast12: {
-    name: "CAST 12",
-    image: "cast12.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast13: {
-    name: "CAST 13",
-    image: "cast13.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast14: {
-    name: "CAST 14",
-    image: "cast14.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast15: {
-    name: "CAST 15",
-    image: "cast15.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast16: {
-    name: "CAST 16",
-    image: "cast16.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast17: {
-    name: "CAST 17",
-    image: "cast17.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast18: {
-    name: "CAST 18",
-    image: "cast18.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast19: {
-    name: "CAST 19",
-    image: "cast19.png",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast20: {
-    name: "CAST 20",
-    image: "cast20.png",
-    hobby: "ここに趣味を入力"
-  }
-
-};
-
-
-function openProfile(id) {
-
-  const profile =
-    castProfiles[id];
-
-  document
-    .getElementById("profile-name")
-    .textContent =
-    profile.name;
-
-  document
-    .getElementById("profile-image")
-    .src =
-    profile.image;
-
-  document
-    .getElementById("profile-image")
-    .alt =
-    profile.name;
-
-  document
-    .getElementById("profile-hobby")
-    .textContent =
-    profile.hobby;
-
-  document
-    .getElementById("profile-modal")
-    .classList
-    .add("active");
-
-  document.body.style.overflow =
-    "hidden";
-}
-
-
-function closeProfile() {
-
-  document
-    .getElementById("profile-modal")
-    .classList
-    .remove("active");
-
-  document.body.style.overflow =
-    "";
-
-}
-
-
-/* ESCでも閉じる */
-
-document.addEventListener(
-  "keydown",
-  function(event) {
-
-    if(event.key === "Escape") {
-      closeProfile();
-    }
-
-  }
-);
-
-</script>
-
+  </main>
 
 </body>
 
