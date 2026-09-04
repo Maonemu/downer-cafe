@@ -1603,3 +1603,169 @@ footer p {
   }
 
 }
+/* ==========================================
+   CAST 20 MEMBERS - FINAL FIX
+========================================== */
+
+.cast-grid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr)) !important;
+
+  gap: 22px !important;
+
+  width: 100% !important;
+  max-width: 1000px !important;
+
+  margin: 0 auto !important;
+}
+
+
+/* ★以前の5人用配置を完全解除 */
+
+.cast-grid .cast-card:nth-child(n) {
+  grid-column: auto !important;
+  grid-row: auto !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+
+  transform: none;
+}
+
+
+/* カード */
+
+.cast-grid .cast-card {
+  min-width: 0 !important;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background:
+    rgba(18, 10, 15, 0.72);
+
+  border:
+    1px solid rgba(190, 110, 150, 0.22);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* ホバー */
+
+.cast-grid .cast-card:hover {
+  transform: translateY(-6px) !important;
+
+  border-color:
+    rgba(220, 135, 180, 0.5);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* キャスト写真 */
+
+.cast-grid .cast-card img {
+  display: block;
+
+  width: 100% !important;
+  height: 300px !important;
+
+  object-fit: cover !important;
+  object-position: center top;
+
+  filter:
+    brightness(0.8)
+    saturate(0.8);
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+
+.cast-grid .cast-card:hover img {
+  transform: scale(1.03);
+
+  filter:
+    brightness(0.96)
+    saturate(0.95);
+}
+
+
+/* 名前部分 */
+
+.cast-grid .cast-info {
+  padding: 18px 12px 20px;
+
+  text-align: center;
+}
+
+
+.cast-grid .cast-info h3 {
+  margin: 0;
+
+  color: #d295b3;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.18em;
+}
+
+
+.cast-grid .cast-info p {
+  margin: 7px 0 0;
+
+  color: #624854;
+
+  font-size: 7px;
+
+  letter-spacing: 0.5em;
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .cast-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+
+/* ==========================================
+   SMARTPHONE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .cast-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 12px !important;
+  }
+
+
+  .cast-grid .cast-card img {
+    height: 230px !important;
+  }
+
+}
