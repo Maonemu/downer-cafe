@@ -1097,3 +1097,19 @@ footer p {
   }
 
 }
+/* ==========================================
+   EVENT SELECT BACK BUTTON
+========================================== */
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo:hover {
+  color: #efbad3;
+
+  text-shadow:
+    0 0 12px rgba(220, 120, 175, 0.25);
+}
