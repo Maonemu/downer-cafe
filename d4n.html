@@ -760,341 +760,60 @@
 
   </footer>
 
-  <!-- =========================
-       PROFILE
-  ========================== -->
+<!-- =========================
+     FLAVOR MODAL
+========================= -->
+
+<div id="flavor-modal" class="flavor-modal">
 
   <div
-    id="profile-modal"
-    class="profile-modal"
-  >
+    class="flavor-overlay"
+    onclick="closeFlavor()"
+  ></div>
 
-    <div
-      class="profile-overlay"
-      onclick="closeProfile()"
-    ></div>
+  <div class="flavor-modal-content">
 
+    <button
+      class="flavor-close"
+      onclick="closeFlavor()"
+    >
+      ×
+    </button>
 
-    <div class="profile-content">
+    <p
+      id="flavor-category"
+      class="flavor-modal-category"
+    ></p>
 
+    <h3 id="flavor-name"></h3>
 
-      <button
-        class="profile-close"
-        onclick="closeProfile()"
-      >
-        ×
-      </button>
+    <div class="flavor-detail">
 
+      <p class="flavor-detail-label">
+        MIX
+      </p>
 
-      <div class="profile-image">
-
-        <img
-          id="profile-image"
-          src=""
-          alt=""
-        >
-
-      </div>
-
-
-      <div class="profile-text">
-
-        <p class="profile-role">
-          CAST PROFILE
-        </p>
-
-        <h3
-          id="profile-name"
-        ></h3>
-
-
-        <div class="profile-item">
-
-          <p class="profile-label">
-            HOBBY
-          </p>
-
-          <p
-            id="profile-hobby"
-            class="profile-value"
-          ></p>
-
-        </div>
-
-      </div>
-
+      <p id="flavor-mix"></p>
 
     </div>
 
+
+    <div class="flavor-detail">
+
+      <p class="flavor-detail-label">
+        TASTE
+      </p>
+
+      <p id="flavor-description"></p>
+
+    </div>
+
+
+    <p
+      id="flavor-quote"
+      class="flavor-quote"
+    ></p>
+
   </div>
 
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
-
-  <script>
-
-    const castProfiles = [
-
-      {
-        name: "CAST 01",
-        image: "d4n-cast01.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 02",
-        image: "d4n-cast02.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 03",
-        image: "d4n-cast03.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 04",
-        image: "d4n-cast04.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 05",
-        image: "d4n-cast05.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 06",
-        image: "d4n-cast06.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 07",
-        image: "d4n-cast07.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 08",
-        image: "d4n-cast08.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 09",
-        image: "d4n-cast09.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 10",
-        image: "d4n-cast10.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 11",
-        image: "d4n-cast11.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 12",
-        image: "d4n-cast12.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 13",
-        image: "d4n-cast13.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 14",
-        image: "d4n-cast14.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 15",
-        image: "d4n-cast15.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 16",
-        image: "d4n-cast16.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 17",
-        image: "d4n-cast17.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 18",
-        image: "d4n-cast18.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 19",
-        image: "d4n-cast19.png",
-        hobby: "ここに趣味"
-      },
-
-      {
-        name: "CAST 20",
-        image: "d4n-cast20.png",
-        hobby: "ここに趣味"
-      }
-
-    ];
-
-
-
-    const grid =
-      document.getElementById(
-        "cast-grid"
-      );
-
-
-    castProfiles.forEach(
-      (cast, index) => {
-
-        const card =
-          document.createElement("div");
-
-        card.className =
-          "cast-card";
-
-        card.innerHTML = `
-          <img
-            src="${cast.image}"
-            alt="${cast.name}"
-          >
-
-          <div class="cast-info">
-
-            <h3>
-              ${cast.name}
-            </h3>
-
-            <p>
-              CAST
-            </p>
-
-          </div>
-        `;
-
-
-        card.addEventListener(
-          "click",
-          () => openProfile(index)
-        );
-
-
-        grid.appendChild(card);
-
-      }
-    );
-
-
-
-    function openProfile(index) {
-
-      const cast =
-        castProfiles[index];
-
-
-      document
-        .getElementById(
-          "profile-name"
-        )
-        .textContent =
-        cast.name;
-
-
-      document
-        .getElementById(
-          "profile-hobby"
-        )
-        .textContent =
-        cast.hobby;
-
-
-      const image =
-        document.getElementById(
-          "profile-image"
-        );
-
-
-      image.src =
-        cast.image;
-
-      image.alt =
-        cast.name;
-
-
-      document
-        .getElementById(
-          "profile-modal"
-        )
-        .classList
-        .add("active");
-
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
-
-
-
-    function closeProfile() {
-
-      document
-        .getElementById(
-          "profile-modal"
-        )
-        .classList
-        .remove("active");
-
-
-      document.body.style.overflow =
-        "";
-
-    }
-
-
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (
-          event.key === "Escape"
-        ) {
-
-          closeProfile();
-
-        }
-
-      }
-    );
-
-  </script>
-
-
-</body>
-
-</html>
+</div>
