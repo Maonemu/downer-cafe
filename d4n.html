@@ -73,20 +73,20 @@ const flavors = [
     quote: "「信じれない程、馬鹿馬鹿しい」"
   },
 
-  {
-    name: "Horny Dope",
-    category: "FRUITY",
-    mix: "グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック",
-    description: "グレープとマンゴーとレッドグミベアで南国のフルーツバスケットに、コットンキャンディーでお菓子のような香りを加え、コニャックの芳醇な香りで締める。非常にフルーティーで濃厚な甘さを持つ複雑で贅沢なミックス。",
-    quote: "「ねぇ、とっくに堕ちてるヨ？」"
-  },
-
-  {
+    {
     name: "トロピカル・ヘル",
     category: "FRUITY",
     mix: "メロン × マンゴー × ココナッツ × グァバ × ジャスミン",
     description: "南国のリゾートを想わすようなフレーバー。マンゴーの甘み、ココナッツのクリーミーな風味、グァバのアクセント、メロンの優しい甘さが重なる複雑なフルーツカクテルのような味わい。",
     quote: "「これが、私のラストリゾート」"
+  },
+  
+  {
+    name: "Horny Dope",
+    category: "SWEETS",
+    mix: "グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック",
+    description: "グレープとマンゴーとレッドグミベアで南国のフルーツバスケットに、コットンキャンディーでお菓子のような香りを加え、コニャックの芳醇な香りで締める。非常にフルーティーで濃厚な甘さを持つ複雑で贅沢なミックス。",
+    quote: "「ねぇ、とっくに堕ちてるヨ？」"
   },
 
   {
@@ -635,17 +635,6 @@ document.addEventListener("DOMContentLoaded", function () {
       onclick="openFlavor(6)"
     >
       <span>07 / FRUITY</span>
-      <h3>Horny Dope</h3>
-      <p>グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック</p>
-    </div>
-
-
-    <div
-      class="flavor-card"
-      data-category="fruity"
-      onclick="openFlavor(7)"
-    >
-      <span>08 / FRUITY</span>
       <h3>トロピカル・ヘル</h3>
       <p>メロン × マンゴー × ココナッツ × グァバ × ジャスミン</p>
     </div>
@@ -655,6 +644,17 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- =====================
          SWEETS
     ====================== -->
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(7)"
+    >
+      <span>08 / FRUITY</span>
+      <h3>Horny Dope</h3>
+      <p>グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック</p>
+    </div>
+    
 
     <div
       class="flavor-card"
