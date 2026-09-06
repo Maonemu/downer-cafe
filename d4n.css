@@ -1304,3 +1304,27 @@ footer p {
   }
 
 }
+/* ==========================================
+   FLAVOR CARD - READABILITY
+========================================== */
+
+.flavor-card {
+  min-height: 210px;
+  padding: 34px 28px;
+}
+
+.flavor-card h3 {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.flavor-card p {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 2;
+}
+
+.flavor-card span {
+  font-size: 7px;
+  opacity: 0.75;
+}
