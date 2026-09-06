@@ -195,43 +195,309 @@
 
 
 <!-- =========================
-     CAST
+     FLAVOR
 ========================= -->
 
-<section id="cast" class="section">
+<section id="flavor" class="section">
 
   <p class="section-number">02</p>
-  <h2>CAST</h2>
+  <h2>FLAVOR</h2>
 
-  <div class="cast-grid">
+  <p class="flavor-guide">
+    22 FLAVORS — 今夜は、どの味を選ぶ？
+  </p>
 
-    <div class="cast-card">
-      <img src="d4n-cast01.png" alt="CAST 01">
-      <div class="cast-info">
-        <h3>CAST 01</h3>
-      </div>
+
+  <!-- FILTER -->
+
+  <div class="flavor-filter">
+
+    <button class="filter-button active" data-filter="all">
+      ALL
+    </button>
+
+    <button class="filter-button" data-filter="fruity">
+      FRUITY
+    </button>
+
+    <button class="filter-button" data-filter="sweets">
+      SWEETS
+    </button>
+
+    <button class="filter-button" data-filter="floral">
+      FLORAL
+    </button>
+
+    <button class="filter-button" data-filter="spice">
+      SPICE
+    </button>
+
+  </div>
+
+
+  <div class="flavor-grid">
+
+
+    <!-- =====================
+         FRUITY
+    ====================== -->
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(0)"
+    >
+      <span>01 / FRUITY</span>
+      <h3>ベリーランド</h3>
+      <p>ブルーベリー × ストロベリー × ラズベリー</p>
     </div>
 
-    <div class="cast-card">
-      <img src="d4n-cast02.png" alt="CAST 02">
-      <div class="cast-info">
-        <h3>CAST 02</h3>
-      </div>
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(1)"
+    >
+      <span>02 / FRUITY</span>
+      <h3>LGBB</h3>
+      <p>ブルーベリー × ラズベリー × レモン × ミント</p>
     </div>
 
-    <div class="cast-card">
-      <img src="d4n-cast03.png" alt="CAST 03">
-      <div class="cast-info">
-        <h3>CAST 03</h3>
-      </div>
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(2)"
+    >
+      <span>03 / FRUITY</span>
+      <h3>アズール・コスモス</h3>
+      <p>グレープフルーツ × ラズベリー</p>
     </div>
 
-    <div class="cast-card">
-      <img src="d4n-cast04.png" alt="CAST 04">
-      <div class="cast-info">
-        <h3>CAST 04</h3>
-      </div>
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(3)"
+    >
+      <span>04 / FRUITY</span>
+      <h3>ミモザ</h3>
+      <p>オレンジ</p>
     </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(4)"
+    >
+      <span>05 / FRUITY</span>
+      <h3>PINK</h3>
+      <p>ストロベリー × ラズベリー × ピーチ</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(5)"
+    >
+      <span>06 / FRUITY</span>
+      <h3>バナナパパ</h3>
+      <p>バナナ</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(6)"
+    >
+      <span>07 / FRUITY</span>
+      <h3>Horny Dope</h3>
+      <p>グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="fruity"
+      onclick="openFlavor(7)"
+    >
+      <span>08 / FRUITY</span>
+      <h3>トロピカル・ヘル</h3>
+      <p>メロン × マンゴー × ココナッツ × グァバ × ジャスミン</p>
+    </div>
+
+
+
+    <!-- =====================
+         SWEETS
+    ====================== -->
+
+    <div
+      class="flavor-card"
+      data-category="sweets"
+      onclick="openFlavor(8)"
+    >
+      <span>09 / SWEETS</span>
+      <h3>天汐の夢</h3>
+      <p>グレープソーダ × コットンキャンディー × ホワイトグミベア</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="sweets"
+      onclick="openFlavor(9)"
+    >
+      <span>10 / SWEETS</span>
+      <h3>Why Not Coffee ?</h3>
+      <p>キャラメル × ミルク × バニラ × コーヒー</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="sweets"
+      onclick="openFlavor(10)"
+    >
+      <span>11 / SWEETS</span>
+      <h3>いちごみるく</h3>
+      <p>ストロベリー × バニラ × ミルク</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="sweets"
+      onclick="openFlavor(11)"
+    >
+      <span>12 / SWEETS</span>
+      <h3>ストッキング</h3>
+      <p>香港ミルクティー × シナモン</p>
+    </div>
+
+
+
+    <!-- =====================
+         FLORAL
+    ====================== -->
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(12)"
+    >
+      <span>13 / FLORAL</span>
+      <h3>Nebel</h3>
+      <p>ホワイトグレープ × Wアップル × キウイ × ローズ</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(13)"
+    >
+      <span>14 / FLORAL</span>
+      <h3>flos</h3>
+      <p>ラベンダーミント × ローズ × ラズベリー × ジャスミン</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(14)"
+    >
+      <span>15 / FLORAL</span>
+      <h3>Melting Cill</h3>
+      <p>グレープソーダ × レッドアップル × ローズ × ジャスミンウーロン</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(15)"
+    >
+      <span>16 / FLORAL</span>
+      <h3>call.10mo87</h3>
+      <p>アールグレイ × ストロベリー × ブルーベリー × ラズベリー × レッドアップル × ホワイトグレープ × ピーチ</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(16)"
+    >
+      <span>17 / FLORAL</span>
+      <h3>Sadist Syndrome</h3>
+      <p>パッションフルーツ × ペアー × ピーチ × ジャスミンティー × ローズ × ムスク</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="floral"
+      onclick="openFlavor(17)"
+    >
+      <span>18 / FLORAL</span>
+      <h3>アイリス</h3>
+      <p>菖蒲（あやめ）</p>
+    </div>
+
+
+
+    <!-- =====================
+         SPICE
+    ====================== -->
+
+    <div
+      class="flavor-card"
+      data-category="spice"
+      onclick="openFlavor(18)"
+    >
+      <span>19 / SPICE</span>
+      <h3>TAIGA</h3>
+      <p>ヒノキ × パンラズナ × カルダモン</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="spice"
+      onclick="openFlavor(19)"
+    >
+      <span>20 / SPICE</span>
+      <h3>真夏の夜の飽和</h3>
+      <p>コーヒー × ポップコーン × ワサビ</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="spice"
+      onclick="openFlavor(20)"
+    >
+      <span>21 / SPICE</span>
+      <h3>SHIBUYA 4a.m.</h3>
+      <p>ペアー × ムスク × パチュリ × カルダモン</p>
+    </div>
+
+
+    <div
+      class="flavor-card"
+      data-category="spice"
+      onclick="openFlavor(21)"
+    >
+      <span>22 / SPICE</span>
+      <h3>Billi Billi</h3>
+      <p>パンラズナ × コーラ × グレープ</p>
+    </div>
+
 
   </div>
 
