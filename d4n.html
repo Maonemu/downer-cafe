@@ -21,6 +21,285 @@
 
 </head>
 
+  <script>
+
+const flavors = [
+
+  {
+    name: "ベリーランド",
+    category: "FRUITY",
+    mix: "ブルーベリー × ストロベリー × ラズベリー",
+    description: "ベリー系の王道フレーバー。完熟したベリーの風味が際立ち、ジューシーかつ甘酸っぱさマシマシ。",
+    quote: "「昔は３B、今は３C」 #王道"
+  },
+
+  {
+    name: "LGBB",
+    category: "FRUITY",
+    mix: "ブルーベリー × ラズベリー × レモン × ミント",
+    description: "ベリー２種の鮮烈な香りと、まろやかな深み。その甘さを酸味あるレモンを加えて引き締め、ミントで吸いやすくスッキリと。",
+    quote: "「SOGIEも忘れずに」"
+  },
+
+  {
+    name: "アズール・コスモス",
+    category: "FRUITY",
+    mix: "グレープフルーツ × ラズベリー",
+    description: "グレープフルーツの爽やかな酸味と、ほのかな苦み。後からラズベリーの甘酸っぱさが追いかけてくる。",
+    quote: "「まるで、あの日の恋のように」"
+  },
+
+  {
+    name: "ミモザ",
+    category: "FRUITY",
+    mix: "オレンジ",
+    description: "オレンジの酸味と甘み、ほのかに感じるアルコール感。鼻腔を通り抜ける華やかな香りが特徴のカクテル再現フレーバー。",
+    quote: "「この世で、最も美味しくて。贅沢なオレンジジュース」"
+  },
+
+  {
+    name: "PINK",
+    category: "FRUITY",
+    mix: "ストロベリー × ラズベリー × ピーチ",
+    description: "全体的に甘めのテイストではあるが、さっぱりとした後味も特徴。吸い方によってはストロベリーの香りが強かったり、時間と共にラズベリーやピーチの香りが強くなる。",
+    quote: "「あの桜の樹の下には、一体何が埋まってるのか」"
+  },
+
+  {
+    name: "バナナパパ",
+    category: "FRUITY",
+    mix: "バナナ",
+    description: "まろやかな甘さが堪らないバナナ。青味や渋みは控えめで、フレッシュなバナナが特徴。",
+    quote: "「信じれない程、馬鹿馬鹿しい」"
+  },
+
+  {
+    name: "Horny Dope",
+    category: "FRUITY",
+    mix: "グレープ × レッドグミベア × マンゴー × コットンキャンディー × コニャック",
+    description: "グレープとマンゴーとレッドグミベアで南国のフルーツバスケットに、コットンキャンディーでお菓子のような香りを加え、コニャックの芳醇な香りで締める。非常にフルーティーで濃厚な甘さを持つ複雑で贅沢なミックス。",
+    quote: "「ねぇ、とっくに堕ちてるヨ？」"
+  },
+
+  {
+    name: "トロピカル・ヘル",
+    category: "FRUITY",
+    mix: "メロン × マンゴー × ココナッツ × グァバ × ジャスミン",
+    description: "南国のリゾートを想わすようなフレーバー。マンゴーの甘み、ココナッツのクリーミーな風味、グァバのアクセント、メロンの優しい甘さが重なる複雑なフルーツカクテルのような味わい。",
+    quote: "「これが、私のラストリゾート」"
+  },
+
+  {
+    name: "天汐の夢",
+    category: "SWEETS",
+    mix: "グレープソーダ × コットンキャンディー × ホワイトグミベア",
+    description: "非常に甘くフルーティーで、お菓子のようなポップな雰囲気のミックス。爽やかなフルーティーさと清涼感もあり、飽きのこない味。",
+    quote: ""
+  },
+
+  {
+    name: "Why Not Coffee ?",
+    category: "SWEETS",
+    mix: "キャラメル × ミルク × バニラ × コーヒー",
+    description: "濃厚で甘く、ほろ苦いカフェ・オ・レやキャラメルマキアートのような、デザート感覚で楽しめる人気のミックス。",
+    quote: ""
+  },
+
+  {
+    name: "いちごみるく",
+    category: "SWEETS",
+    mix: "ストロベリー × バニラ × ミルク",
+    description: "いちごの甘酸っぱさと濃厚なクリーミーさが融合した、いちごミルクやストロベリーシェイクのような甘く濃厚なデザート系。初心者にもおすすめ。",
+    quote: ""
+  },
+
+  {
+    name: "ストッキング",
+    category: "SWEETS",
+    mix: "香港ミルクティー × シナモン",
+    description: "濃厚な茶葉と甘いミルクにスパイスが香るクリーミーなフレーバー。シナモンがチャイのような深みとスパイシーなアクセントを加える。",
+    quote: ""
+  },
+
+  {
+    name: "Nebel",
+    category: "FLORAL",
+    mix: "ホワイトグレープ × Wアップル × キウイ × ローズ",
+    description: "ホワイトグレープとWアップルの濃厚な甘さに、キウイの酸味とローズの香りがアクセント。華やかで洗練されたミックス。",
+    quote: "「めまいがする程、薄汚れたゴミ捨て場のダクトでCHILLする。」"
+  },
+
+  {
+    name: "flos",
+    category: "FLORAL",
+    mix: "ラベンダーミント × ローズ × ラズベリー × ジャスミン",
+    description: "ラベンダーミントとローズの春らしさ、ジャスミンの爽やかさにラズベリーの程よい甘さを加えた甘さっぱり系。",
+    quote: "「飾った花は直ぐに枯れてく、絶え間ない後悔よ」"
+  },
+
+  {
+    name: "Melting Cill",
+    category: "FLORAL",
+    mix: "グレープソーダ × レッドアップル × ローズ × ジャスミンウーロン",
+    description: "華やかでフルーティー、かつ上品な甘さ。レッドアップルとグレープソーダに花の香りが重なり、ウーロン茶の渋みで引き締まる。",
+    quote: ""
+  },
+
+  {
+    name: "call.10mo87",
+    category: "FLORAL",
+    mix: "アールグレイ × ストロベリー × ブルーベリー × ラズベリー × レッドアップル × ホワイトグレープ × ピーチ",
+    description: "甘さ、酸味、華やかさをバランスよく組み合わせたミックス。アールグレイをベースに複雑なフルーツの香りを楽しめる。",
+    quote: ""
+  },
+
+  {
+    name: "Sadist Syndrome",
+    category: "FLORAL",
+    mix: "パッションフルーツ × ペアー × ピーチ × ジャスミンティー × ローズ × ムスク",
+    description: "非常にエレガントで華やかなフローラル・フルーツティー系。酸味、甘み、花とティーの香り、ムスクの奥深さが組み合わさる。",
+    quote: ""
+  },
+
+  {
+    name: "アイリス",
+    category: "FLORAL",
+    mix: "菖蒲（あやめ）",
+    description: "ハーブの要素が強く、お茶のような爽やかさがある。山々の間の水辺に吹く風のような清涼感のあるフローラル・ウッディ系。",
+    quote: ""
+  },
+
+  {
+    name: "TAIGA",
+    category: "SPICE",
+    mix: "ヒノキ × パンラズナ × カルダモン",
+    description: "ウッディなヒノキをベースに、パンラズナの独特な甘みとカルダモンの爽やかなスパイス。和風スパイシーで複雑な上級者向け。",
+    quote: "「あの森は確かに生きてる」"
+  },
+
+  {
+    name: "真夏の夜の飽和",
+    category: "SPICE",
+    mix: "コーヒー × ポップコーン × ワサビ",
+    description: "コーヒーとポップコーンの香ばしさにワサビを合わせた個性的なフレーバー。異国情緒のある味わいで特別な時間を演出。",
+    quote: ""
+  },
+
+  {
+    name: "SHIBUYA 4a.m.",
+    category: "SPICE",
+    mix: "ペアー × ムスク × パチュリ × カルダモン",
+    description: "甘くジューシーな洋梨を入り口に、カルダモン、パチュリ、ムスクが重なる洗練されたオリエンタル調のフレーバー。",
+    quote: ""
+  },
+
+  {
+    name: "Billi Billi",
+    category: "SPICE",
+    mix: "パンラズナ × コーラ × グレープ",
+    description: "スパイス、甘さ、酸味のバランスがよく、パンラズナのお香のような香りをコーラとグレープが調和させたリッチなミックス。",
+    quote: ""
+  }
+
+];
+
+
+function openFlavor(index) {
+
+  const flavor = flavors[index];
+
+  document.getElementById("flavor-category").textContent =
+    flavor.category;
+
+  document.getElementById("flavor-name").textContent =
+    flavor.name;
+
+  document.getElementById("flavor-mix").textContent =
+    flavor.mix;
+
+  document.getElementById("flavor-description").textContent =
+    flavor.description;
+
+  document.getElementById("flavor-quote").textContent =
+    flavor.quote;
+
+  document
+    .getElementById("flavor-modal")
+    .classList.add("active");
+
+  document.body.style.overflow = "hidden";
+
+}
+
+
+function closeFlavor() {
+
+  document
+    .getElementById("flavor-modal")
+    .classList.remove("active");
+
+  document.body.style.overflow = "";
+
+}
+
+
+/* CATEGORY FILTER */
+
+const filterButtons =
+  document.querySelectorAll(".filter-button");
+
+const flavorCards =
+  document.querySelectorAll(".flavor-card");
+
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const filter =
+      button.dataset.filter;
+
+    filterButtons.forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+
+    flavorCards.forEach(card => {
+
+      if (
+        filter === "all" ||
+        card.dataset.category === filter
+      ) {
+
+        card.classList.remove("hidden");
+
+      } else {
+
+        card.classList.add("hidden");
+
+      }
+
+    });
+
+  });
+
+});
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (event.key === "Escape") {
+      closeFlavor();
+    }
+
+  }
+);
+
+</script>
 
 <body>
 
