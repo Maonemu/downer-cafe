@@ -9,17 +9,29 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>VRChat Events</title>
+  <meta
+    name="description"
+    content="VRChatイベント ダウナー喫茶 Dull救世主 / Project Shisha:D4N"
+  >
 
+  <title>VRChat Events | Select Your Night</title>
+
+  <!-- CSS / キャッシュ対策 -->
   <link
     rel="stylesheet"
-    href="select.css"
+    href="select.css?v=20260907-1"
   >
 </head>
+
 
 <body>
 
   <main class="event-select">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <div class="select-header">
 
@@ -38,17 +50,29 @@
     </div>
 
 
+
+    <!-- =========================
+         EVENT SELECT
+    ========================== -->
+
     <div class="event-grid">
 
 
-      <!-- DOWNER CAFE -->
+      <!-- =====================
+           DOWNER CAFE
+      ====================== -->
 
       <a
         href="downer.html"
         class="event-card downer-card"
+        aria-label="ダウナー喫茶 Dull救世主へ"
       >
 
-        <div class="event-glow"></div>
+        <div
+          class="event-glow"
+          aria-hidden="true"
+        ></div>
+
 
         <div class="event-content">
 
@@ -56,15 +80,18 @@
             VRChat DOWNER CAFE
           </p>
 
+
           <h2>
             ダウナー喫茶<br>
-             Dull救世主
+            Dull救世主
           </h2>
+
 
           <p class="event-description">
             甘くて、暗くて、<br>
             少しだけ怪しい夜。
           </p>
+
 
           <span class="event-enter">
             ENTER
@@ -76,15 +103,26 @@
 
 
 
-      <!-- PROJECT SHISHA D4N -->
+      <!-- =====================
+           PROJECT SHISHA:D4N
+      ====================== -->
 
       <a
         href="d4n.html"
         class="event-card d4n-card"
+        aria-label="Project Shisha:D4Nへ"
       >
 
-        <div class="smoke smoke-1"></div>
-        <div class="smoke smoke-2"></div>
+        <div
+          class="smoke smoke-1"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="smoke smoke-2"
+          aria-hidden="true"
+        ></div>
+
 
         <div class="event-content">
 
@@ -92,14 +130,17 @@
             VRChat SHISHA BAR
           </p>
 
+
           <h2 class="d4n-title">
             Project Shisha:D4N
           </h2>
+
 
           <p class="event-description">
             煙と灯りに溶ける、<br>
             深夜のひととき。
           </p>
+
 
           <span class="event-enter">
             ENTER
