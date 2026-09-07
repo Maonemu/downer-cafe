@@ -9,26 +9,38 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>ダウナー喫茶　Dull救世主 | VRChat Event</title>
+  <meta
+    name="description"
+    content="ダウナー喫茶 Dull救世主 - VRChat Event"
+  >
 
- <link rel="stylesheet" href="downer.css">
+  <title>ダウナー喫茶 Dull救世主 | VRChat Event</title>
+
+  <!-- CSS / キャッシュ対策 -->
+  <link
+    rel="stylesheet"
+    href="downer.css?v=20260907-2"
+  >
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       FIXED NAV
-  ========================== -->
+  <!-- =====================================
+       NAVIGATION
+  ====================================== -->
 
   <nav class="fixed-nav">
 
     <div class="nav-inner">
 
-    <a href="index.html" class="nav-logo">
-  ← EVENTS
-</a>
+      <a
+        href="index.html"
+        class="nav-logo"
+      >
+        ← EVENTS
+      </a>
 
 
       <div class="nav-links">
@@ -58,6 +70,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="nav-x"
+          aria-label="Official X"
         >
           𝕏
         </a>
@@ -70,11 +83,14 @@
 
 
 
-  <!-- =========================
-       TOP
-  ========================== -->
+  <!-- =====================================
+       HERO
+  ====================================== -->
 
-  <header id="top" class="hero">
+  <header
+    id="top"
+    class="hero"
+  >
 
     <div class="hero-inner">
 
@@ -82,10 +98,12 @@
         VRChat EVENT
       </p>
 
+
       <h1>
         ダウナー喫茶<br>
-         Dull救世主
+        Dull救世主
       </h1>
+
 
       <p class="hero-copy">
         非現実的な夢を見る大人達へ。
@@ -122,9 +140,9 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================
        ABOUT
-  ========================== -->
+  ====================================== -->
 
   <section
     id="about"
@@ -156,23 +174,22 @@
 
       <p>
         一見すると、ただのカフェバー。<br>
-        けれど、ここにはひとつの噂があります。<br>
+        けれど、ここにはひとつの噂があります。<br><br>
 
-        「気になるキャストと、二人きりで過ごせる場所があるらしい。」<br>
+        「気になるキャストと、二人きりで過ごせる場所があるらしい。」<br><br>
 
         薄暗く静かな店内には、CHILLでどこか気だるい空気が流れています。<br>
         迎えるのは、穏やかでダウナーなキャストたち。<br>
-        珈琲やカクテルを片手に、思い思いの夜をお楽しみください。<br>
+        珈琲やカクテルを片手に、思い思いの夜をお楽しみください。<br><br>
 
         そしてもし、<br>
         「この人と、もう少し話したい。」<br>
-        そう思ったなら、キャストへ声をかけてみてください。<br>
+        そう思ったなら、キャストへ声をかけてみてください。<br><br>
 
-        その先に待つのは、誰にも邪魔されない二人だけの時間。<br>
+        その先に待つのは、誰にも邪魔されない二人だけの時間。<br><br>
 
         語るも、静かに過ごすも自由。<br>
         どうぞ、お好きな夜を。
-
       </p>
 
     </div>
@@ -181,247 +198,46 @@
 
 
 
-<!-- =========================
-     CAST
-========================== -->
+  <!-- =====================================
+       CAST
+  ====================================== -->
 
-<section
-  id="cast"
-  class="section"
->
+  <section
+    id="cast"
+    class="section"
+  >
 
-  <p class="section-number">
-    02
-  </p>
+    <p class="section-number">
+      02
+    </p>
 
-  <h2>
-    CAST
-  </h2>
-
-  <p class="cast-guide">
-    SELECT A CAST
-  </p>
+    <h2>
+      CAST
+    </h2>
 
 
-  <div class="cast-grid">
+    <p class="cast-guide">
+      SELECT A CAST
+    </p>
 
 
-    <div class="cast-card" onclick="openProfile('cast01')">
-      <img src="そらほし.webp" alt="CAST 01">
-      <div class="cast-info">
-        <h3>irur ihsoharos</h3>
-        <p>CAST</p>
-      </div>
-    </div>
+    <!--
+      CASTカードはJavaScriptで自動生成されます。
+      HTML側へカードを追加する必要はありません。
+    -->
 
+    <div
+      id="cast-grid"
+      class="cast-grid"
+    ></div>
 
-    <div class="cast-card" onclick="openProfile('cast02')">
-      <img src="める.webp" alt="CAST 02">
-      <div class="cast-info">
-        <h3>朔夜 める</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast03')">
-      <img src="トウヤン.webp" alt="CAST 03">
-      <div class="cast-info">
-        <h3>トウヤン</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast04')">
-      <img src="のあ.webp" alt="CAST 04">
-      <div class="cast-info">
-        <h3>-Nøa-</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast05')">
-      <img src="df.webp" alt="CAST 05">
-      <div class="cast-info">
-        <h3>ただのとど</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast06')">
-      <img src="df.webp" alt="CAST 06">
-      <div class="cast-info">
-        <h3>いぬ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast07')">
-      <img src="df.webp" alt="CAST 07">
-      <div class="cast-info">
-        <h3>よいしょ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast08')">
-      <img src="にゃむねこ.webp" alt="CAST 08">
-      <div class="cast-info">
-        <h3>にゃむねこ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast09')">
-      <img src="df.webp" alt="CAST 09">
-      <div class="cast-info">
-        <h3>にこ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast10')">
-      <img src="df.webp" alt="CAST 10">
-      <div class="cast-info">
-        <h3> 猫月 冬夜</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast11')">
-      <img src="とかく.webp" alt="CAST 11">
-      <div class="cast-info">
-        <h3>虚＿utsuro</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast12')">
-      <img src="ベル.webp" alt="CAST 12">
-      <div class="cast-info">
-        <h3>ベル</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast13')">
-      <img src="つれなし.webp" alt="CAST 13">
-      <div class="cast-info">
-        <h3>つれなし</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast14')">
-      <img src="まお.webp" alt="CAST 14">
-      <div class="cast-info">
-        <h3>まお</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast15')">
-      <img src="df.webp" alt="CAST 15">
-      <div class="cast-info">
-        <h3>てと</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast16')">
-      <img src="しき.webp" alt="CAST 17">
-      <div class="cast-info">
-        <h3>四季</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-        <div class="cast-card" onclick="openProfile('cast17')">
-      <img src="なるせ.webp" alt="CAST 16">
-      <div class="cast-info">
-        <h3>N4rUsE</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast18')">
-      <img src="まつ.webp" alt="CAST 18">
-      <div class="cast-info">
-        <h3>まつ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast19')">
-      <img src="たにがわ.webp" alt="CAST 19">
-      <div class="cast-info">
-        <h3>たにがわ</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-    <div class="cast-card" onclick="openProfile('cast20')">
-      <img src="なぎさ.webp" alt="CAST 20">
-      <div class="cast-info">
-        <h3>Nagisa</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-    
-    <div class="cast-card" onclick="openProfile('cast21')">
-      <img src="るぷす.webp" alt="CAST 21">
-      <div class="cast-info">
-        <h3>Rupus</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-      <div class="cast-card" onclick="openProfile('cast22')">
-      <img src="df.webp" alt="CAST 22">
-      <div class="cast-info">
-        <h3>ぽて</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-      <div class="cast-card" onclick="openProfile('cast23')">
-      <img src="たねっち.webp" alt="CAST 23">
-      <div class="cast-info">
-        <h3>たねっち</h3>
-        <p>CAST</p>
-      </div>
-    </div>
-
-
-  </div>
-
-</section>
+  </section>
 
 
 
-  <!-- =========================
+  <!-- =====================================
        SYSTEM
-  ========================== -->
+  ====================================== -->
 
   <section
     id="system"
@@ -458,7 +274,6 @@
       </div>
 
 
-
       <div class="system-item">
 
         <span>
@@ -475,7 +290,6 @@
         </p>
 
       </div>
-
 
 
       <div class="system-item">
@@ -508,9 +322,11 @@
         HOW TO JOIN
       </p>
 
+
       <h3>
         イベントへの参加方法
       </h3>
+
 
       <p class="join-text">
         VRChat Group「ダウナー喫茶 Dull救世主」へ参加後、<br>
@@ -539,9 +355,9 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================
        GALLERY
-  ========================== -->
+  ====================================== -->
 
   <section
     id="gallery"
@@ -567,16 +383,19 @@
       <img
         src="gallery01.png"
         alt="ダウナー喫茶 Gallery 1"
+        loading="lazy"
       >
 
       <img
         src="gallery02.png"
         alt="ダウナー喫茶 Gallery 2"
+        loading="lazy"
       >
 
       <img
         src="gallery03.png"
         alt="ダウナー喫茶 Gallery 3"
+        loading="lazy"
       >
 
     </div>
@@ -585,9 +404,9 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================
        RULE
-  ========================== -->
+  ====================================== -->
 
   <section
     id="rule"
@@ -614,7 +433,7 @@
       </p>
 
       <p>
-        ・過度な容量の下ネタ、暴言はやめてください。
+        ・過度な下ネタ、暴言はやめてください。
       </p>
 
       <p>
@@ -631,9 +450,9 @@
 
 
 
-  <!-- =========================
-       X / VRChat
-  ========================== -->
+  <!-- =====================================
+       SOCIAL
+  ====================================== -->
 
   <section
     id="links"
@@ -668,7 +487,6 @@
       </a>
 
 
-
       <!-- VRChat -->
 
       <a
@@ -695,11 +513,18 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================
        FOOTER
-  ========================== -->
+  ====================================== -->
 
   <footer>
+
+    <a
+      href="index.html"
+      class="footer-back"
+    >
+      ← EVENT SELECT
+    </a>
 
     <p>
       © 2026 DOWNER CAFE
@@ -709,62 +534,73 @@
 
 
 
- <!-- =========================
-     CAST PROFILE MODAL
-========================== -->
-
-<div
-  id="profile-modal"
-  class="profile-modal"
->
+  <!-- =====================================
+       CAST PROFILE MODAL
+  ====================================== -->
 
   <div
-    class="profile-overlay"
-    onclick="closeProfile()"
-  ></div>
+    id="profile-modal"
+    class="profile-modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="profile-overlay"
+      data-close-profile
+    ></div>
 
 
-  <div class="profile-content">
-
-    <button
-      class="profile-close"
-      onclick="closeProfile()"
-      aria-label="閉じる"
+    <div
+      class="profile-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="profile-name"
     >
-      ×
-    </button>
 
 
-    <div class="profile-image">
-
-      <img
-        id="profile-image"
-        src=""
-        alt=""
+      <button
+        type="button"
+        class="profile-close"
+        data-close-profile
+        aria-label="閉じる"
       >
-
-    </div>
-
-
-    <div class="profile-text">
-
-      <p class="profile-role">
-        CAST PROFILE
-      </p>
-
-      <h3 id="profile-name"></h3>
+        ×
+      </button>
 
 
-      <div class="profile-item">
+      <div class="profile-image">
 
-        <p class="profile-label">
-          HOBBY
+        <img
+          id="profile-image"
+          src=""
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="profile-text">
+
+        <p class="profile-role">
+          CAST PROFILE
         </p>
 
-        <p
-          id="profile-hobby"
-          class="profile-value"
-        ></p>
+
+        <h3 id="profile-name"></h3>
+
+
+        <div class="profile-item">
+
+          <p class="profile-label">
+            HOBBY
+          </p>
+
+          <p
+            id="profile-hobby"
+            class="profile-value"
+          ></p>
+
+        </div>
 
       </div>
 
@@ -772,221 +608,398 @@
 
   </div>
 
-</div>
 
 
-
-  <!-- ========================================
+  <!-- =====================================
        JAVASCRIPT
-  ========================================= -->
+  ====================================== -->
 
- <script>
+  <script>
 
-const castProfiles = {
+    /*
+      ========================================
+      CAST DATA
+      ========================================
 
-  cast01: {
-    name: "irur ihsoharos",
-    image: "そらほし.webp",
-    hobby: "欲望に溺れる人を見ること。"
-  },
+      キャストを追加・変更するときは
+      基本的にこの部分だけ編集すればOKです。
 
-  cast02: {
-    name: "朔夜 める",
-    image: "める.webp",
-    hobby: "LOL"
-  },
-
-  cast03: {
-    name: "トウヤン",
-    image: "トウヤン.webp",
-    hobby: " TRPG＆アクセサリー作り"
-  },
-
-  cast04: {
-    name: "-Nøa-",
-    image: "のあ.webp",
-    hobby: "ゲーム(PCゲーム色々)"
-  },
-
-  cast05: {
-    name: "とど",
-    image: "df.webp",
-    hobby: "料理、お菓子作り、Unity"
-  },
-
-  cast06: {
-    name: "いぬ",
-    image: "df.webp",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast07: {
-    name: "よいしょ",
-    image: "df.webp",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast08: {
-    name: "にゃむねこ",
-    image: "にゃむねこ.webp",
-    hobby: "ベース、音楽"
-  },
-
-  cast09: {
-    name: "にこ",
-    image: "にこ.webp",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast10: {
-    name: "猫月 冬夜",
-    image: "df.webp",
-    hobby: "ここに趣味を入力"
-  },
-
-  cast11: {
-    name: "虚＿utsuro",
-    image: "とかく.webp",
-    hobby: "TRPG/演技(特に声劇)"
-  },
-
-    cast12: {
-    name: "ベル",
-    image: "ベル.webp",
-    hobby: "TRPG(CoC6版)、ちょっとした声劇、ちょっとしたお絵描き"
-  },
-  
-  cast13: {
-    name: "つれなし",
-    image: "つれなし.webp",
-    hobby: "みんなとやるゲーム"
-  },
-
-  cast14: {
-    name: "まお",
-    image: "まお.webp",
-    hobby: "ゲームと歌"
-  },
-
-  cast15: {
-    name: "てと",
-    image: "df.webp",
-    hobby: "改変"
-  },
-
-  cast16:{
-    name: "四季",
-    image: "しき.webp",
-    hobby: "ゲーム、音楽"
-  },
-
-    cast17: {
-    name: "N4rUsE",
-    image: "なるせ.webp",
-    hobby: "イラスト、喋り、改変"
-  },
-  
-  cast18: {
-    name: "まつ",
-    image: "まつ.webp",
-    hobby: "改変"
-  },
-
-  cast19:{
-    name: "たにがわ",
-    image: "たにがわ.webp",
-    hobby: "絵を描くこと"
-  },
-
-  cast20: {
-    name: "Nagisa",
-    image: "なぎさ.webp",
-    hobby: "スノーボード、ドライブ！！"
-  },
-
-    cast21: {
-    name: "Rupus",
-    image: "るぷす.webp",
-    hobby: "ゲーム！"
-  },
-
-      cast22: {
-    name: "ぽて",
-    image: "df.webp",
-    hobby: "仕事が趣味みたいなもの（３Dモデリング、イラスト）ゲームも好き"
-  },
-
-      cast23: {
-    name: "たねっち",
-    image: "たねっち.webp",
-    hobby: "ドライブとか釣り"
-  },
-
-};
+      画像を差し替えた場合は、
+      IMAGE_VERSIONの数字も変更してください。
+    */
 
 
-function openProfile(id) {
-
-  const profile =
-    castProfiles[id];
-
-  document
-    .getElementById("profile-name")
-    .textContent =
-    profile.name;
-
-  document
-    .getElementById("profile-image")
-    .src =
-    profile.image;
-
-  document
-    .getElementById("profile-image")
-    .alt =
-    profile.name;
-
-  document
-    .getElementById("profile-hobby")
-    .textContent =
-    profile.hobby;
-
-  document
-    .getElementById("profile-modal")
-    .classList
-    .add("active");
-
-  document.body.style.overflow =
-    "hidden";
-}
+    const IMAGE_VERSION =
+      "20260907-2";
 
 
-function closeProfile() {
+    const castProfiles = [
 
-  document
-    .getElementById("profile-modal")
-    .classList
-    .remove("active");
+      {
+        name: "irur ihsoharos",
+        image: "そらほし.webp",
+        hobby: "欲望に溺れる人を見ること。"
+      },
 
-  document.body.style.overflow =
-    "";
+      {
+        name: "朔夜 める",
+        image: "める.webp",
+        hobby: "LOL"
+      },
 
-}
+      {
+        name: "トウヤン",
+        image: "トウヤン.webp",
+        hobby: "TRPG＆アクセサリー作り"
+      },
+
+      {
+        name: "-Nøa-",
+        image: "のあ.webp",
+        hobby: "ゲーム（PCゲーム色々）"
+      },
+
+      {
+        name: "ただのとど",
+        image: "df.webp",
+        hobby: "料理、お菓子作り、Unity"
+      },
+
+      {
+        name: "いぬ",
+        image: "df.webp",
+        hobby: "ここに趣味を入力"
+      },
+
+      {
+        name: "よいしょ",
+        image: "df.webp",
+        hobby: "ここに趣味を入力"
+      },
+
+      {
+        name: "にゃむねこ",
+        image: "にゃむねこ.webp",
+        hobby: "ベース、音楽"
+      },
+
+      {
+        name: "にこ",
+        image: "df.webp",
+        hobby: "ここに趣味を入力"
+      },
+
+      {
+        name: "猫月 冬夜",
+        image: "df.webp",
+        hobby: "ここに趣味を入力"
+      },
+
+      {
+        name: "虚＿utsuro",
+        image: "とかく.webp",
+        hobby: "TRPG／演技（特に声劇）"
+      },
+
+      {
+        name: "ベル",
+        image: "ベル.webp",
+        hobby: "TRPG（CoC6版）、ちょっとした声劇、ちょっとしたお絵描き"
+      },
+
+      {
+        name: "つれなし",
+        image: "つれなし.webp",
+        hobby: "みんなとやるゲーム"
+      },
+
+      {
+        name: "まお",
+        image: "まお.webp",
+        hobby: "ゲームと歌"
+      },
+
+      {
+        name: "てと",
+        image: "df.webp",
+        hobby: "改変"
+      },
+
+      {
+        name: "四季",
+        image: "しき.webp",
+        hobby: "ゲーム、音楽"
+      },
+
+      {
+        name: "N4rUsE",
+        image: "なるせ.webp",
+        hobby: "イラスト、喋り、改変"
+      },
+
+      {
+        name: "まつ",
+        image: "まつ.webp",
+        hobby: "改変"
+      },
+
+      {
+        name: "たにがわ",
+        image: "たにがわ.webp",
+        hobby: "絵を描くこと"
+      },
+
+      {
+        name: "Nagisa",
+        image: "なぎさ.webp",
+        hobby: "スノーボード、ドライブ！！"
+      },
+
+      {
+        name: "Rupus",
+        image: "るぷす.webp",
+        hobby: "ゲーム！"
+      },
+
+      {
+        name: "ぽて",
+        image: "df.webp",
+        hobby: "仕事が趣味みたいなもの（3Dモデリング、イラスト）。ゲームも好き"
+      },
+
+      {
+        name: "たねっち",
+        image: "たねっち.webp",
+        hobby: "ドライブとか釣り"
+      }
+
+    ];
 
 
-/* ESCでも閉じる */
 
-document.addEventListener(
-  "keydown",
-  function(event) {
+    /* =====================================
+       ELEMENTS
+    ====================================== */
 
-    if(event.key === "Escape") {
-      closeProfile();
+    const castGrid =
+      document.getElementById("cast-grid");
+
+
+    const profileModal =
+      document.getElementById("profile-modal");
+
+
+    const profileImage =
+      document.getElementById("profile-image");
+
+
+    const profileName =
+      document.getElementById("profile-name");
+
+
+    const profileHobby =
+      document.getElementById("profile-hobby");
+
+
+
+    /* =====================================
+       CREATE CAST CARDS
+    ====================================== */
+
+    function renderCast() {
+
+      castGrid.innerHTML = "";
+
+
+      castProfiles.forEach(
+        (cast, index) => {
+
+          const card =
+            document.createElement("button");
+
+
+          card.type =
+            "button";
+
+
+          card.className =
+            "cast-card";
+
+
+          const number =
+            String(index + 1)
+              .padStart(2, "0");
+
+
+          card.setAttribute(
+            "aria-label",
+            `${cast.name}のプロフィールを見る`
+          );
+
+
+          card.innerHTML = `
+
+            <img
+              src="${cast.image}?v=${IMAGE_VERSION}"
+              alt="${cast.name}"
+              loading="lazy"
+            >
+
+            <div class="cast-info">
+
+              <span class="cast-number">
+                ${number}
+              </span>
+
+              <h3>
+                ${cast.name}
+              </h3>
+
+              <p>
+                CAST
+              </p>
+
+            </div>
+
+          `;
+
+
+          card.addEventListener(
+            "click",
+            () => openProfile(index)
+          );
+
+
+          castGrid.appendChild(card);
+
+        }
+      );
+
     }
 
-  }
-);
 
-</script>
+
+    /* =====================================
+       OPEN PROFILE
+    ====================================== */
+
+    function openProfile(index) {
+
+      const profile =
+        castProfiles[index];
+
+
+      if (!profile) {
+        return;
+      }
+
+
+      profileName.textContent =
+        profile.name;
+
+
+      profileHobby.textContent =
+        profile.hobby;
+
+
+      profileImage.src =
+        `${profile.image}?v=${IMAGE_VERSION}`;
+
+
+      profileImage.alt =
+        profile.name;
+
+
+      profileModal.classList.add(
+        "active"
+      );
+
+
+      profileModal.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+
+      document.body.classList.add(
+        "modal-open"
+      );
+
+    }
+
+
+
+    /* =====================================
+       CLOSE PROFILE
+    ====================================== */
+
+    function closeProfile() {
+
+      profileModal.classList.remove(
+        "active"
+      );
+
+
+      profileModal.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+
+      document.body.classList.remove(
+        "modal-open"
+      );
+
+    }
+
+
+
+    /* CLOSE BUTTON / BACKGROUND */
+
+    document
+      .querySelectorAll(
+        "[data-close-profile]"
+      )
+      .forEach(element => {
+
+        element.addEventListener(
+          "click",
+          closeProfile
+        );
+
+      });
+
+
+
+    /* ESC */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape" &&
+          profileModal.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeProfile();
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================
+       INITIAL
+    ====================================== */
+
+    renderCast();
+
+  </script>
 
 
 </body>
