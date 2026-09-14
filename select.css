@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -21,13 +21,13 @@ body {
 
   background:
     radial-gradient(
-      circle at 50% 20%,
-      #171118 0%,
-      #0d090e 42%,
-      #050405 100%
+      circle at 50% 15%,
+      #141020 0%,
+      #0a0810 45%,
+      #050407 100%
     );
 
-  color: #d1c5cb;
+  color: #d6d1dc;
 
   font-family:
     "Yu Gothic",
@@ -49,7 +49,6 @@ body {
 
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 }
 
@@ -67,7 +66,7 @@ body {
 .select-small {
   margin: 0 0 15px;
 
-  color: #6c5863;
+  color: #746b82;
 
   font-size: 8px;
 
@@ -77,29 +76,22 @@ body {
 .select-header h1 {
   margin: 0;
 
-  color: #c5a1b3;
+  color: #d5ccea;
 
-  font-size: clamp(
-    28px,
-    4vw,
-    46px
-  );
+  font-size: clamp(28px, 4vw, 46px);
 
   font-weight: 300;
-
-  line-height: 1.4;
 
   letter-spacing: 0.22em;
 
   text-shadow:
-    0 0 35px
-    rgba(180, 110, 150, 0.08);
+    0 0 30px rgba(120, 95, 255, 0.08);
 }
 
 .select-copy {
-  margin: 18px 0 0;
+  margin-top: 18px;
 
-  color: #75636e;
+  color: #82798e;
 
   font-size: 10px;
 
@@ -108,7 +100,7 @@ body {
 
 
 /* ==========================================
-   EVENT GRID
+   GRID
 ========================================== */
 
 .event-grid {
@@ -128,12 +120,10 @@ body {
 
 
 /* ==========================================
-   EVENT CARD
+   CARD
 ========================================== */
 
 .event-card {
-  min-width: 0;
-
   min-height: 520px;
 
   position: relative;
@@ -149,17 +139,13 @@ body {
   text-decoration: none;
 
   border:
-    1px solid
-    rgba(255, 255, 255, 0.07);
+    1px solid rgba(255,255,255,0.07);
 
   transition:
     transform 0.45s ease,
     border-color 0.45s ease,
     box-shadow 0.45s ease;
 }
-
-
-/* 暗いグラデーション */
 
 .event-card::after {
   content: "";
@@ -173,19 +159,42 @@ body {
   background:
     linear-gradient(
       to top,
-      rgba(4, 3, 5, 0.96) 0%,
-      rgba(4, 3, 5, 0.7) 35%,
-      rgba(4, 3, 5, 0.12) 75%,
-      rgba(4, 3, 5, 0.03) 100%
+      rgba(4,3,6,0.96) 0%,
+      rgba(4,3,6,0.68) 36%,
+      rgba(4,3,6,0.12) 78%,
+      rgba(4,3,6,0.02) 100%
     );
 
   pointer-events: none;
 }
 
+.event-card:hover {
+  transform: translateY(-8px);
+}
 
-/* 上部の淡い光 */
+.event-card:focus-visible {
+  outline: none;
 
-.event-card::before {
+  transform: translateY(-6px);
+}
+
+
+/* ==========================================
+   DOWNER
+   PURPLE × BLUE
+========================================== */
+
+.downer-card {
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      #20133e 0%,
+      #100b26 48%,
+      #070611 100%
+    );
+}
+
+.downer-card::before {
   content: "";
 
   position: absolute;
@@ -193,161 +202,208 @@ body {
   width: 420px;
   height: 420px;
 
-  top: -160px;
+  top: -150px;
   left: 50%;
 
   z-index: 1;
 
   border-radius: 50%;
 
+  background:
+    radial-gradient(
+      circle,
+      rgba(112, 77, 255, 0.32),
+      rgba(77, 166, 255, 0.12) 55%,
+      transparent 75%
+    );
+
+  filter: blur(60px);
+
   transform: translateX(-50%);
-
-  filter: blur(70px);
-
-  opacity: 0.2;
 
   pointer-events: none;
 
   transition:
-    opacity 0.45s ease,
-    transform 0.65s ease;
+    0.5s ease;
 }
 
-
-.event-card:hover {
-  transform:
-    translateY(-8px);
-}
-
-.event-card:hover::before {
-  opacity: 0.35;
-
+.downer-card:hover::before {
   transform:
     translateX(-50%)
     scale(1.1);
 }
 
-
-/* キーボード操作 */
-
-.event-card:focus-visible {
-  outline: none;
-
-  transform:
-    translateY(-6px);
-}
-
-
-/* ==========================================
-   DOWNER CAFE
-========================================== */
-
-.downer-card {
-  background:
-    radial-gradient(
-      circle at 50% 28%,
-      #38192c 0%,
-      #190c15 52%,
-      #080608 100%
-    );
-}
-
-.downer-card::before {
-  background:
-    rgba(200, 90, 150, 0.42);
-}
-
 .downer-card:hover,
 .downer-card:focus-visible {
   border-color:
-    rgba(220, 135, 180, 0.5);
+    rgba(92, 137, 255, 0.62);
 
   box-shadow:
     0 30px 90px
-    rgba(150, 55, 105, 0.17);
+    rgba(86, 74, 210, 0.24);
+}
+
+.downer-card .event-type {
+  color: #8172c9;
+}
+
+.downer-card h2 {
+  color: #b8a3ff;
+}
+
+.downer-card .event-description {
+  color: #918eb6;
 }
 
 .downer-card .event-enter {
-  color: #c88da9;
+  color: #69b9ff;
 
   border-color:
-    rgba(210, 130, 170, 0.35);
+    rgba(77,166,255,0.48);
 }
 
 .downer-card:hover .event-enter,
 .downer-card:focus-visible .event-enter {
-  color: #efbfd6;
+  color: #c7e6ff;
 
   border-color:
-    rgba(225, 145, 185, 0.7);
+    rgba(100,190,255,0.85);
 
   background:
-    rgba(160, 65, 115, 0.1);
+    rgba(77,166,255,0.09);
+}
+
+
+/* DOWNER GLOW */
+
+.event-glow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  top: 20px;
+  left: 50%;
+
+  z-index: 1;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(146, 88, 255, 0.18),
+      rgba(59, 136, 255, 0.09) 55%,
+      transparent 75%
+    );
+
+  filter: blur(80px);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  transition:
+    0.5s ease;
+}
+
+.downer-card:hover .event-glow {
+  transform:
+    translateX(-50%)
+    scale(1.1);
+
+  opacity: 1;
 }
 
 
 /* ==========================================
-   PROJECT SHISHA:D4N
+   D4N
+   PINK
 ========================================== */
 
 .d4n-card {
   background:
     radial-gradient(
       circle at 50% 25%,
-      #252b48 0%,
-      #111522 52%,
-      #06070a 100%
+      #35102e 0%,
+      #170918 50%,
+      #080609 100%
     );
 }
 
 .d4n-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -150px;
+  left: 50%;
+
+  z-index: 1;
+
+  border-radius: 50%;
+
   background:
-    rgba(100, 125, 210, 0.42);
+    radial-gradient(
+      circle,
+      rgba(255, 79, 216, 0.34),
+      rgba(185, 76, 255, 0.12) 55%,
+      transparent 75%
+    );
+
+  filter: blur(60px);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
 }
 
 .d4n-card:hover,
 .d4n-card:focus-visible {
   border-color:
-    rgba(126, 155, 220, 0.55);
+    rgba(255, 91, 220, 0.62);
 
   box-shadow:
     0 30px 90px
-    rgba(70, 90, 175, 0.18);
+    rgba(200, 62, 165, 0.24);
 }
 
 .d4n-card .event-type {
-  color: #667394;
+  color: #a96a99;
 }
 
 .d4n-card .d4n-title {
-  color: #aebddd;
+  color: #ff9bea;
 }
 
 .d4n-card .event-description {
-  color: #828b9f;
+  color: #b88aa8;
 }
 
 .d4n-card .event-enter {
-  color: #94a9d5;
+  color: #ff73de;
 
   border-color:
-    rgba(125, 155, 220, 0.35);
+    rgba(255,79,216,0.42);
 }
 
 .d4n-card:hover .event-enter,
 .d4n-card:focus-visible .event-enter {
-  color: #c2d0ee;
+  color: #ffd1f3;
 
   border-color:
-    rgba(145, 175, 235, 0.7);
+    rgba(255,120,225,0.85);
 
   background:
-    rgba(80, 105, 180, 0.1);
+    rgba(255,79,216,0.09);
 }
 
 
 /* ==========================================
-   EVENT CONTENT
+   CONTENT
 ========================================== */
 
 .event-content {
@@ -363,11 +419,7 @@ body {
 .event-type {
   margin: 0 0 18px;
 
-  color: #765c69;
-
   font-size: 8px;
-
-  line-height: 1.8;
 
   letter-spacing: 0.5em;
 }
@@ -375,33 +427,17 @@ body {
 .event-content h2 {
   margin: 0;
 
-  color: #d3a2ba;
-
-  font-size: clamp(
-    28px,
-    4vw,
-    45px
-  );
+  font-size: clamp(28px, 4vw, 45px);
 
   font-weight: 300;
 
   line-height: 1.45;
 
   letter-spacing: 0.1em;
-
-  text-shadow:
-    0 0 25px
-    rgba(190, 110, 155, 0.08);
-}
-
-.event-content .d4n-title {
-  overflow-wrap: anywhere;
 }
 
 .event-description {
   margin: 25px 0 40px;
-
-  color: #91808a;
 
   font-size: 11px;
 
@@ -421,59 +457,12 @@ body {
 
   letter-spacing: 0.4em;
 
-  transition:
-    transform 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease;
+  transition: 0.35s ease;
 }
 
 .event-card:hover .event-enter,
 .event-card:focus-visible .event-enter {
-  transform:
-    translateX(6px);
-}
-
-
-/* ==========================================
-   DOWNER GLOW
-========================================== */
-
-.event-glow {
-  position: absolute;
-
-  width: 360px;
-  height: 360px;
-
-  top: 25px;
-  left: 50%;
-
-  z-index: 1;
-
-  border-radius: 50%;
-
-  background:
-    rgba(190, 70, 135, 0.13);
-
-  filter:
-    blur(85px);
-
-  transform:
-    translateX(-50%);
-
-  pointer-events: none;
-
-  transition:
-    opacity 0.5s ease,
-    transform 0.7s ease;
-}
-
-.downer-card:hover .event-glow {
-  opacity: 0.9;
-
-  transform:
-    translateX(-50%)
-    scale(1.1);
+  transform: translateX(6px);
 }
 
 
@@ -488,10 +477,9 @@ body {
 
   border-radius: 50%;
 
-  filter:
-    blur(70px);
+  filter: blur(70px);
 
-  opacity: 0.2;
+  opacity: 0.22;
 
   pointer-events: none;
 
@@ -508,10 +496,9 @@ body {
   right: 10%;
 
   background:
-    rgba(120, 145, 220, 0.35);
+    rgba(255, 77, 210, 0.36);
 
-  transform:
-    rotate(25deg);
+  transform: rotate(25deg);
 }
 
 .smoke-2 {
@@ -522,14 +509,13 @@ body {
   left: 15%;
 
   background:
-    rgba(120, 95, 180, 0.22);
+    rgba(185, 76, 255, 0.24);
 
-  transform:
-    rotate(-30deg);
+  transform: rotate(-30deg);
 }
 
 .d4n-card:hover .smoke {
-  opacity: 0.3;
+  opacity: 0.34;
 }
 
 .d4n-card:hover .smoke-1 {
@@ -548,160 +534,25 @@ body {
 
 
 /* ==========================================
-   TABLET
-========================================== */
-
-@media (max-width: 900px) {
-
-  .event-select {
-    padding:
-      60px 28px;
-  }
-
-  .event-card {
-    min-height:
-      480px;
-  }
-
-  .event-content {
-    padding:
-      45px 35px;
-  }
-
-}
-
-
-/* ==========================================
    MOBILE
 ========================================== */
 
 @media (max-width: 750px) {
 
   .event-select {
-    min-height:
-      100svh;
-
-    padding:
-      60px 20px;
-  }
-
-  .select-header {
-    margin-bottom:
-      40px;
-  }
-
-  .select-small {
-    font-size:
-      7px;
-  }
-
-  .select-header h1 {
-    font-size:
-      28px;
-
-    letter-spacing:
-      0.14em;
-  }
-
-  .select-copy {
-    font-size:
-      9px;
+    padding: 70px 20px;
   }
 
   .event-grid {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      20px;
+    grid-template-columns: 1fr;
   }
 
   .event-card {
-    min-height:
-      430px;
+    min-height: 430px;
   }
 
   .event-content {
-    padding:
-      40px 30px;
-  }
-
-  .event-content h2 {
-    font-size:
-      30px;
-  }
-
-  .event-description {
-    margin:
-      22px 0 32px;
-  }
-
-}
-
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 430px) {
-
-  .event-select {
-    padding:
-      50px 16px;
-  }
-
-  .select-header h1 {
-    font-size:
-      24px;
-  }
-
-  .event-card {
-    min-height:
-      390px;
-  }
-
-  .event-content {
-    padding:
-      34px 24px;
-  }
-
-  .event-content h2 {
-    font-size:
-      26px;
-  }
-
-  .d4n-card .d4n-title {
-    font-size:
-      25px;
-  }
-
-  .event-enter {
-    padding:
-      11px 27px;
-  }
-
-}
-
-
-/* ==========================================
-   REDUCED MOTION
-========================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-
-    transition-duration:
-      0.01ms !important;
-
-    animation-duration:
-      0.01ms !important;
-
-    animation-iteration-count:
-      1 !important;
+    padding: 40px 30px;
   }
 
 }
