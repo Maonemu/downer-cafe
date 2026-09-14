@@ -9,7 +9,7 @@
 
   --pink: #ff4fd8;
   --pink-light: #ff9bea;
-  --pink-pale: #ffd0f3;
+  --pink-pale: #ffd1f3;
 
   --purple: #b94cff;
 
@@ -17,8 +17,13 @@
   --text-soft: #aa96a5;
 
   --line:
-    rgba(255, 79, 216, 0.20);
+    rgba(255, 79, 216, 0.2);
 }
+
+
+/* ==========================================
+   RESET
+========================================== */
 
 * {
   box-sizing: border-box;
@@ -26,7 +31,6 @@
 
 html {
   scroll-behavior: smooth;
-
   color-scheme: dark;
 }
 
@@ -40,13 +44,13 @@ body {
   background:
     radial-gradient(
       circle at 20% 0%,
-      rgba(255, 52, 200, 0.13),
+      rgba(255, 50, 200, 0.13),
       transparent 30%
     ),
     radial-gradient(
       circle at 80% 25%,
-      rgba(183, 57, 235, 0.08),
-      transparent 34%
+      rgba(185, 76, 255, 0.08),
+      transparent 32%
     ),
     radial-gradient(
       circle at 50% 0%,
@@ -69,9 +73,12 @@ body.modal-open {
   overflow: hidden;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 img {
   display: block;
-
   max-width: 100%;
 }
 
@@ -90,7 +97,7 @@ a {
 
 
 /* ==========================================
-   NAV
+   NAVIGATION
 ========================================== */
 
 .fixed-nav {
@@ -105,7 +112,7 @@ a {
   z-index: 99999;
 
   background:
-    rgba(7, 4, 7, 0.86);
+    rgba(7, 4, 7, 0.88);
 
   border-bottom:
     1px solid var(--line);
@@ -141,12 +148,6 @@ a {
 }
 
 .nav-logo {
-  display:
-    inline-flex;
-
-  align-items:
-    center;
-
   color:
     var(--pink-light);
 
@@ -207,23 +208,17 @@ a {
 }
 
 .nav-links a::after {
-  content:
-    "";
+  content: "";
 
   position:
     absolute;
 
-  left:
-    0;
+  left: 0;
 
-  bottom:
-    -8px;
+  bottom: -8px;
 
-  width:
-    0;
-
-  height:
-    1px;
+  width: 0;
+  height: 1px;
 
   background:
     linear-gradient(
@@ -289,8 +284,7 @@ a {
 }
 
 .hero::before {
-  content:
-    "";
+  content: "";
 
   position:
     absolute;
@@ -358,7 +352,7 @@ a {
     clamp(
       44px,
       7vw,
-      90px
+      88px
     );
 
   font-weight:
@@ -390,7 +384,9 @@ a {
 }
 
 
-/* HERO SMOKE */
+/* ==========================================
+   HERO SMOKE
+========================================== */
 
 .hero-smoke {
   position:
@@ -450,7 +446,9 @@ a {
 }
 
 
-/* NEXT OPEN */
+/* ==========================================
+   NEXT OPEN
+========================================== */
 
 .next-open span {
   display:
@@ -674,7 +672,7 @@ a {
 
 
 /* ==========================================
-   FLAVOR
+   FLAVOR GUIDE
 ========================================== */
 
 .flavor-guide {
@@ -692,7 +690,9 @@ a {
 }
 
 
-/* FILTER */
+/* ==========================================
+   FILTER
+========================================== */
 
 .flavor-filter {
   display:
@@ -761,7 +761,9 @@ a {
 }
 
 
-/* GRID */
+/* ==========================================
+   FLAVOR GRID
+========================================== */
 
 .flavor-grid {
   display:
@@ -778,7 +780,9 @@ a {
 }
 
 
-/* CARD */
+/* ==========================================
+   FLAVOR CARD
+========================================== */
 
 .flavor-card {
   appearance:
@@ -851,7 +855,9 @@ a {
 }
 
 
-/* IMAGE */
+/* ==========================================
+   FLAVOR IMAGE
+========================================== */
 
 .flavor-image {
   width:
@@ -908,7 +914,9 @@ a {
 }
 
 
-/* INFO */
+/* ==========================================
+   FLAVOR INFO
+========================================== */
 
 .flavor-info {
   flex:
@@ -987,7 +995,9 @@ a {
 }
 
 
-/* PLACEHOLDER */
+/* ==========================================
+   IMAGE PLACEHOLDER
+========================================== */
 
 .flavor-image-placeholder {
   width:
@@ -1451,9 +1461,6 @@ a {
 
   font-size:
     28px;
-
-  line-height:
-    1;
 }
 
 .social-title {
@@ -1495,9 +1502,6 @@ footer {
 
   letter-spacing:
     0.3em;
-
-  transition:
-    0.3s ease;
 }
 
 .footer-back:hover {
@@ -1521,7 +1525,7 @@ footer p {
 
 
 /* ==========================================
-   FLAVOR MODAL
+   MODAL
 ========================================== */
 
 .flavor-modal {
@@ -1532,7 +1536,7 @@ footer p {
     0;
 
   z-index:
-    999999;
+    9999999;
 
   display:
     flex;
@@ -1552,9 +1556,12 @@ footer p {
   visibility:
     hidden;
 
+  pointer-events:
+    none;
+
   transition:
-    opacity 0.35s ease,
-    visibility 0.35s ease;
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .flavor-modal.active {
@@ -1563,6 +1570,9 @@ footer p {
 
   visibility:
     visible;
+
+  pointer-events:
+    auto;
 }
 
 .flavor-overlay {
@@ -1573,7 +1583,7 @@ footer p {
     0;
 
   background:
-    rgba(5, 2, 5, 0.93);
+    rgba(5, 2, 5, 0.94);
 
   backdrop-filter:
     blur(12px);
@@ -1592,17 +1602,17 @@ footer p {
   max-height:
     88vh;
 
+  position:
+    relative;
+
+  z-index:
+    2;
+
   display:
     grid;
 
   grid-template-columns:
     1fr 1fr;
-
-  position:
-    relative;
-
-  z-index:
-    1;
 
   overflow:
     hidden;
@@ -1637,6 +1647,11 @@ footer p {
     scale(1);
 }
 
+
+/* ==========================================
+   MODAL IMAGE
+========================================== */
+
 .flavor-modal-image {
   min-height:
     500px;
@@ -1663,13 +1678,12 @@ footer p {
 
   object-fit:
     cover;
-
-  object-position:
-    center;
 }
 
 
-/* MODAL TEXT */
+/* ==========================================
+   MODAL TEXT
+========================================== */
 
 .flavor-modal-text {
   padding:
@@ -1717,9 +1731,6 @@ footer p {
 
   line-height:
     1.4;
-
-  letter-spacing:
-    0.08em;
 }
 
 .flavor-detail {
@@ -1776,7 +1787,9 @@ footer p {
 }
 
 
-/* CLOSE */
+/* ==========================================
+   CLOSE
+========================================== */
 
 .flavor-close {
   position:
@@ -1797,9 +1810,6 @@ footer p {
   height:
     42px;
 
-  padding:
-    0;
-
   color:
     var(--pink-light);
 
@@ -1811,9 +1821,6 @@ footer p {
 
   font-size:
     25px;
-
-  line-height:
-    1;
 
   cursor:
     pointer;
@@ -1908,8 +1915,6 @@ footer p {
   }
 
 
-  /* HERO */
-
   .hero {
     min-height:
       95vh;
@@ -1920,10 +1925,7 @@ footer p {
 
   .hero h1 {
     font-size:
-      38px;
-
-    letter-spacing:
-      0.06em;
+      36px;
   }
 
   .hero-copy {
@@ -1931,8 +1933,6 @@ footer p {
       10px;
   }
 
-
-  /* SECTION */
 
   .section {
     width:
@@ -1942,13 +1942,6 @@ footer p {
       85px 0;
   }
 
-  .section > h2 {
-    margin-bottom:
-      45px;
-  }
-
-
-  /* FLAVOR */
 
   .flavor-grid {
     grid-template-columns:
@@ -1977,8 +1970,6 @@ footer p {
   }
 
 
-  /* SYSTEM */
-
   .system-grid {
     grid-template-columns:
       1fr;
@@ -1993,13 +1984,6 @@ footer p {
       1px solid var(--line);
   }
 
-  .join-area {
-    padding:
-      45px 25px;
-  }
-
-
-  /* GALLERY */
 
   .gallery {
     grid-template-columns:
@@ -2012,8 +1996,6 @@ footer p {
   }
 
 
-  /* SOCIAL */
-
   .social-grid {
     flex-direction:
       column;
@@ -2022,13 +2004,6 @@ footer p {
       center;
   }
 
-  .social-button {
-    width:
-      min(100%, 310px);
-  }
-
-
-  /* MODAL */
 
   .flavor-modal {
     padding:
@@ -2037,7 +2012,7 @@ footer p {
 
   .flavor-modal-content {
     max-height:
-      90vh;
+      92vh;
 
     grid-template-columns:
       1fr;
@@ -2061,7 +2036,7 @@ footer p {
 
   .flavor-modal-text {
     padding:
-      40px 30px;
+      38px 28px 45px;
   }
 
   .flavor-modal-text h3 {
@@ -2080,7 +2055,7 @@ footer p {
 
   .hero h1 {
     font-size:
-      31px;
+      30px;
   }
 
   .filter-button {
@@ -2096,67 +2071,4 @@ footer p {
       11px;
   }
 
-}
-/* ==========================================
-   IMPORTANT FIX
-========================================== */
-
-[hidden] {
-  display: none !important;
-}
-
-
-/* モーダルを確実に最前面へ */
-
-.flavor-modal {
-  position: fixed !important;
-
-  inset: 0 !important;
-
-  z-index: 9999999 !important;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  pointer-events: none;
-
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-}
-
-.flavor-modal.active {
-  opacity: 1;
-
-  visibility: visible;
-
-  pointer-events: auto;
-}
-
-.flavor-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 0;
-
-  background:
-    rgba(5, 2, 5, 0.94);
-
-  backdrop-filter: blur(12px);
-
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.flavor-modal-content {
-  position: relative;
-
-  z-index: 1;
 }
