@@ -2097,3 +2097,66 @@ footer p {
   }
 
 }
+/* ==========================================
+   IMPORTANT FIX
+========================================== */
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* モーダルを確実に最前面へ */
+
+.flavor-modal {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  z-index: 9999999 !important;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.flavor-modal.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+.flavor-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background:
+    rgba(5, 2, 5, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.flavor-modal-content {
+  position: relative;
+
+  z-index: 1;
+}
