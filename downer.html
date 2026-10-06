@@ -19,7 +19,7 @@
   <!-- CSS / キャッシュ対策 -->
   <link
     rel="stylesheet"
-    href="downer.css?v=4"
+    href="downer.css?v=5"
   >
 </head>
 
@@ -220,11 +220,6 @@
       SELECT A CAST
     </p>
 
-
-    <!--
-      CASTカードはJavaScriptで自動生成されます。
-      HTML側へカードを追加する必要はありません。
-    -->
 
     <div
       id="cast-grid"
@@ -467,8 +462,6 @@
     <div class="social-grid">
 
 
-      <!-- X -->
-
       <a
         href="https://x.com/Darry_nA?s=20"
         target="_blank"
@@ -486,8 +479,6 @@
 
       </a>
 
-
-      <!-- VRChat -->
 
       <a
         href="https://t.co/qvewBpiTkd"
@@ -589,14 +580,32 @@
         <h3 id="profile-name"></h3>
 
 
+        <!-- 個室 -->
+
         <div class="profile-item">
 
           <p class="profile-label">
-            HOBBY
+            PRIVATE ROOM
           </p>
 
           <p
-            id="profile-hobby"
+            id="profile-private-room"
+            class="profile-value"
+          ></p>
+
+        </div>
+
+
+        <!-- NG -->
+
+        <div class="profile-item">
+
+          <p class="profile-label">
+            NG
+          </p>
+
+          <p
+            id="profile-ng"
             class="profile-value"
           ></p>
 
@@ -621,16 +630,23 @@
       CAST DATA
       ========================================
 
-      キャストを追加・変更するときは
-      基本的にこの部分だけ編集すればOKです。
+      privateRoom = 個室
+      ng          = NG
 
-      画像を差し替えた場合は、
-      IMAGE_VERSIONの数字も変更してください。
+      あとからこの2項目へ内容を
+      入力するだけでプロフィールへ反映されます。
+
+      例：
+
+      privateRoom: "添い寝・雑談",
+      ng: "過度な下ネタ"
+
+      ========================================
     */
 
 
     const IMAGE_VERSION =
-      "20260907-2";
+      "20261006-1";
 
 
     const castProfiles = [
@@ -638,182 +654,211 @@
       {
         name: "CelesTea",
         image: "てあ.webp",
-        Private room: "労う"
-        NG: "低俗な発言"
+        privateRoom: "労う",
+        ng: "低俗な発言"
       },
-      
+
       {
         name: "irur ihsoharos",
         image: "そらほし.webp",
-        Private room: "欲望に溺れる人を見ること。"
+        privateRoom: "多分何でもできる。",
+        ng: "NGは食べた"
       },
 
       {
         name: "朔夜 める",
         image: "める.webp",
-        hobby: "LOL"
+        privateRoom: "雑談・撫で・近距離",
+        ng: "反応に困るので直球すぎる下ネタ"
       },
 
       {
         name: "トウヤン",
         image: "トウヤン.webp",
-        hobby: "TRPG＆アクセサリー作り"
+        privateRoom: "",
+        ng: ""
       },
 
       {
         name: "-Nøa-",
         image: "のあ.webp",
-        hobby: "ゲーム（PCゲーム色々）"
+        privateRoom: "雑談,添い寝,耳舐め,その他要求があれば",
+        ng: ""
       },
 
       {
         name: "ただのとど",
         image: "とど.webp",
-        hobby: "料理、お菓子作り、Unity"
+        privateRoom: "R18多め←人は選びます",
+        ng: ""
       },
 
       {
         name: "よいしょ",
         image: "よいしょ.webp",
-        hobby: "音楽・カフェ巡り"
+        privateRoom: "趣味の話とか",
+        ng: "下ネタ"
       },
 
       {
         name: "にゃむねこ",
         image: "にゃむねこ.webp",
-        hobby: "ベース、音楽"
+        privateRoom: "撫で、囁き",
+        ng: "特にない、、って言いたいけど未成年であることで法律が許さないことがいっぱいあるかも"
       },
 
       {
         name: "にこ",
         image: "にこ.webp",
-        hobby: "ゲーム、バスケ"
+        privateRoom: "近距離接客",
+        ng: ""
       },
 
       {
         name: "猫月 冬夜",
         image: "ねこづき.webp",
-        hobby: "タバコ吸うこと"
+        privateRoom: "短い時間ならOK",
+        ng: ""
       },
 
       {
         name: "虚＿utsuro",
         image: "とかく.webp",
-        hobby: "TRPG／演技（特に声劇）"
+        privateRoom: "おしゃべり/ちょっとした恋愛RP",
+        ng: "過度な身体接触"
       },
 
       {
         name: "ベル",
         image: "ベル.webp",
-        hobby: "TRPG（CoC6版）、ちょっとした声劇、ちょっとしたお絵描き"
+        privateRoom: "",
+        ng: "喘ぎ声聞こえるとびっくりする。彼氏持ちなので度が過ぎた接客はできないです"
       },
 
       {
         name: "つれなし",
         image: "つれなし.webp",
-        hobby: "みんなとやるゲーム"
+        privateRoom: "なんでも",
+        ng: ""
       },
 
       {
         name: "まお",
         image: "まお.webp",
-        hobby: "ゲームと歌"
+        privateRoom: "",
+        ng: "過度な接触/大声/反応に困ること"
       },
 
       {
         name: "てと",
         image: "てと.webp",
-        hobby: "改変"
+        privateRoom: "あまやかしとか",
+        ng: ""
       },
 
       {
         name: "四季",
         image: "しき.webp",
-        hobby: "ゲーム、音楽"
+        privateRoom: ": 雑談,撫で,添い寝,",
+        ng: "大きい音"
       },
 
       {
         name: "N4rUsE",
         image: "なるせ.webp",
-        hobby: "イラスト、喋り、改変"
+        privateRoom: "雑談、添い寝、耳攻め、撫で、リクエストにお答えします",
+        ng: "撫で音以外の音"
       },
 
       {
         name: "たにがわ",
         image: "たにがわ.webp",
-        hobby: "読書"
+        privateRoom: "お話し、撫で、その他要望があれば",
+        ng: "未成年なので法律が許さないことも…"
       },
 
       {
         name: "Nagisa",
         image: "なぎさ.webp",
-        hobby: "スノーボード、ドライブ！！"
+        privateRoom: "要望があればなんでも？",
+        ng: ""
       },
 
       {
         name: "Rupus",
         image: "るぷす.webp",
-        hobby: "ゲーム！"
+        privateRoom: "",
+        ng: ""
       },
 
       {
         name: "ぽて",
         image: "ぽて.webp",
-        hobby: "仕事が趣味みたいなもの（3Dモデリング、イラスト）。ゲームも好き"
+        privateRoom: "撫で、甘やかし？その他要望があれば",
+        ng: "集合体、過度な下ネタ苦手かもです"
       },
 
       {
         name: "たねっち",
         image: "たねっち.webp",
-        hobby: "ドライブとか釣り"
+        privateRoom: "NG無しやったるます",
+        ng: ""
       },
 
-　    {
+      {
         name: "夜宮りお",
         image: "りお.webp",
-        hobby: "ゲーム・歌・寝ること"
+        privateRoom: "雑談・撫で・できる範囲での要望があれば",
+        ng: "大きい音・声"
       },
-      
+
       {
         name: "ペリトン",
         image: "ぺリトン.webp",
-        hobby: "ゲーム、カラオケ、映画"
+        privateRoom: "雑談、できる範囲でなんでも",
+        ng: ""
       },
-      
+
       {
         name: "夜凪",
         image: "ろえ.webp",
-        hobby: "ゲーム・イベント巡り・チルワでお喋り"
+        privateRoom: "至近距離メンヘラメロ接客",
+        ng: ""
       },
 
       {
         name: "アケ",
         image: "アケ.webp",
-        hobby: "短い文章の長文化。"
-      },
-      
-      {
-        name: "???",
-        image: "df.webp",
-        hobby: ""
+        privateRoom: "話し、アケについて",
+        ng: "お客様からの過度な触れ合い、自分自身"
       },
 
       {
         name: "???",
         image: "df.webp",
-        hobby: "????"
+        privateRoom: "",
+        ng: ""
       },
-      
+
       {
         name: "???",
         image: "df.webp",
-        hobby: "????"
+        privateRoom: "",
+        ng: ""
       },
-      
+
       {
         name: "???",
         image: "df.webp",
-        hobby: "????"
+        privateRoom: "",
+        ng: ""
+      },
+
+      {
+        name: "???",
+        image: "df.webp",
+        privateRoom: "",
+        ng: ""
       }
 
     ];
@@ -840,8 +885,16 @@
       document.getElementById("profile-name");
 
 
-    const profileHobby =
-      document.getElementById("profile-hobby");
+    const profilePrivateRoom =
+      document.getElementById(
+        "profile-private-room"
+      );
+
+
+    const profileNg =
+      document.getElementById(
+        "profile-ng"
+      );
 
 
 
@@ -941,8 +994,12 @@
         profile.name;
 
 
-      profileHobby.textContent =
-        profile.hobby;
+      profilePrivateRoom.textContent =
+        profile.privateRoom || "未設定";
+
+
+      profileNg.textContent =
+        profile.ng || "未設定";
 
 
       profileImage.src =
