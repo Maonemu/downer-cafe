@@ -1095,10 +1095,158 @@
     /* =====================================
        INITIAL
     ====================================== */
-
     renderCast();
 
   </script>
+
+
+  <!-- =====================================
+       NEXT OPEN AUTO DATE
+       毎週木曜日 / 日本時間
+  ====================================== -->
+
+  <script>
+
+    function updateNextOpenDate() {
+
+      /*
+        日本時間の「今日」を取得
+      */
+
+      const now =
+        new Date();
+
+      const japanDateString =
+        new Intl.DateTimeFormat(
+          "en-CA",
+          {
+            timeZone: "Asia/Tokyo",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          }
+        ).format(now);
+
+
+      const [
+        year,
+        month,
+        day
+      ] =
+        japanDateString
+          .split("-")
+          .map(Number);
+
+
+      /*
+        日本時間の日付として作成
+      */
+
+      const today =
+        new Date(
+          year,
+          month - 1,
+          day
+        );
+
+
+      /*
+        JavaScriptの曜日
+
+        0 = 日曜日
+        1 = 月曜日
+        2 = 火曜日
+        3 = 水曜日
+        4 = 木曜日
+        5 = 金曜日
+        6 = 土曜日
+      */
+
+      const THURSDAY = 4;
+
+
+      /*
+        次の木曜日までの日数
+
+        木曜日当日は
+        その日の開催日を表示
+      */
+
+      let daysUntilThursday =
+        (
+          THURSDAY -
+          today.getDay() +
+          7
+        ) % 7;
+
+
+      /*
+        次回開催日
+      */
+
+      const nextOpen =
+        new Date(today);
+
+      nextOpen.setDate(
+        today.getDate() +
+        daysUntilThursday
+      );
+
+
+      /*
+        YYYY.MM.DD に変換
+      */
+
+      const nextYear =
+        nextOpen.getFullYear();
+
+
+      const nextMonth =
+        String(
+          nextOpen.getMonth() + 1
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      const nextDay =
+        String(
+          nextOpen.getDate()
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      /*
+        HTMLへ表示
+      */
+
+      const dateElement =
+        document.getElementById(
+          "next-open-date"
+        );
+
+
+      if (dateElement) {
+
+        dateElement.textContent =
+          `${nextYear}.${nextMonth}.${nextDay}`;
+
+      }
+
+    }
+
+
+    updateNextOpenDate();
+
+  </script>
+
+
+</body>
+
+</html>
 
 
 </body>
